@@ -162,20 +162,19 @@
         <svg width="48" height="48" fill="none" stroke="rgba(240,237,232,0.2)" stroke-width="1.2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
         <span style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--fg3)">Add Miro board screenshot from the kickoff workshop</span>
       </div>
-      <p class="cs-split-caption">"Stepping into Joey's Shoes" - kickoff workshop, Oct 15</p>
+      <p class="cs-split-caption">"Stepping into Joey's Shoes" - kickoff workshop</p>
     </div>
     <div>
-      <p class="cs-block-tag">Inside the Kickoff Workshop</p>
-      <h2 class="cs-block-heading">Making the persona's frustration visible to the whole room</h2>
+      <p class="cs-block-tag">The power of workshops</p>
+      <h2 class="cs-block-heading">Making the persona's frustration visible</h2>
       <p>The persona-empathy exercise wasn't just a slide - the team worked through Joey's actual day together on a shared board, mapping every point of friction: the repetitive proofing and governance work, the difficulty finding where to make a needed change, compliance unable to get the information they needed. Having the whole room build that picture together, rather than reading it in a doc, is what made the research stick through everything that followed.</p>
     </div>
   </div>
 
   <!-- SKETCH REVIEW DETAIL -->
   <div class="cs-block reveal">
-    <p class="cs-block-tag">Oct 24 Sketch Review</p>
-    <h2 class="cs-block-heading">Real tensions I had to design around, not just execute past</h2>
-    <p>Beyond the trust framing, the sketch review surfaced specific decisions with real tradeoffs - the kind that don't have an obviously correct answer, just a reasoned one.</p>
+    <p class="cs-block-tag">Presenting ideas for feedback</p>
+    <h2 class="cs-block-heading">Navigating design tensions</h2>
     <div class="photo-frame" style="aspect-ratio:16/9;margin-bottom:2rem">
       <svg width="48" height="48" fill="none" stroke="rgba(240,237,232,0.2)" stroke-width="1.2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
       <span style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--fg3)">Add video clip from the Oct 24 sketch review meeting</span>
@@ -183,39 +182,32 @@
     <div class="principles-list">
       <div class="principle-item">
         <span class="principle-num">01</span>
-        <div class="principle-text"><strong>Configuration vs. defaults</strong><span>I recognized that if users were given full manual configuration control, they simply wouldn't visit that settings surface often - an argument for strong defaults over exposing raw configurability.</span></div>
+        <div class="principle-text"><strong>Configuration vs. defaults</strong><span>I demonstrated the value in letting tenants set custom tone thresholds (a legal notice needs a more formal tone than a welcome email) and advocated for that as the ideal end state. But given the MVP approach, I made the case to hold off: users would likely configure this once at setup, tweak it briefly, then rarely touch it again short of a full rebrand. I proposed handling that initial configuration in the backend on the user's behalf instead, deferring full self-service to a later phase.</span></div>
       </div>
       <div class="principle-item">
         <span class="principle-num">02</span>
-        <div class="principle-text"><strong>An open technical question, raised rather than glossed over</strong><span>How would the model even become aware that content had already been updated or approved, if it wasn't re-analyzing the whole template each time? I put this question to engineering directly instead of assuming an answer.</span></div>
+       <div class="principle-text"><strong>Collaborating on technical feasibility</strong><span>When working with engineering, I always do my due diligence to ask feasibility questions that could impact trust and performance. In this case, if the system re-analyzed the entire template every time one block changed, that could slow performance unnecessarily. At worst, it could undermine the locking mechanism entirely, if excluded content got swept back into a full re-scan. So I asked engineering directly how the model would know a specific block had been updated or approved, without re-analyzing everything each time.</span></div>
       </div>
       <div class="principle-item">
         <span class="principle-num">03</span>
-        <div class="principle-text"><strong>Named personas, concrete specs</strong><span>I defined functional specs for both the Tone and Readability tools - assess, score, suggest, log changes, support bulk assessment, surface scores during proofing - split across two personas: Karl (setup/configuration) and Joey (day-to-day adjustment and use).</span></div>
-      </div>
-      <div class="principle-item">
-        <span class="principle-num">04</span>
-        <div class="principle-text"><strong>A structured placement decision, not a guess</strong><span>Rather than assuming where these tools should live, I ran an explicit evaluation across five real candidate surfaces: the Communication Template Builder, the Communication Template Table, the Approvals/Proofing/Governance Table, Settings, the CT Resource Builder, and the Rapid Communication Sender Builder.</span></div>
+        <div class="principle-text"><strong>Scoping the rollout</strong><span>Product originally asked for this functionality in three places: the Communication Template Builder, the CT Resource Builder, and the Rapid Communication Sender Builder. I influenced the MVP decision to scope it down to just the Communication Template Builder first, with the other two planned for post-MVP. I also proposed two new locations: the Communication Template Table and the Approvals/Proofing/Governance Table. That came from a conversation with our Director of Sales Engineering, who shared the value of showing scores at a table level, so users know at a glance which templates need editing. That same conversation led me to propose periodic re-scanning too, since MVP only scored new templates, with no way to catch existing ones retroactively. I also suggested descoping the Rapid Communication Sender Builder entirely, since it ties to the already-descoped Cody persona.</span></div>
       </div>
     </div>
   </div>
 
   <!-- DESIGN REVIEW -->
-  <div class="cs-split reveal">
+  <div class="cs-split reveal" style="align-items:center">
     <div class="cs-split-img">
       <div class="photo-frame">
-        <svg width="48" height="48" fill="none" stroke="rgba(240,237,232,0.2)" stroke-width="1.2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        <span style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--fg3)">Add screenshot of the tone/readability modal from this review</span>
+        <svg width="48" height="48" fill="none" stroke="rgba(240,237,232,0.2)" stroke-width="1.2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        <span style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--fg3)">Add video clip - scroll bars burying action buttons, live demo</span>
       </div>
-      <p class="cs-split-caption">The tone analysis modal, Nov 4 design review</p>
+      <p class="cs-split-caption">Demonstrating a platform debt issue</p>
     </div>
     <div>
-      <p class="cs-block-tag">Nov 4 Design Review</p>
-      <h2 class="cs-block-heading">Choosing reliable math over impressive-sounding AI</h2>
-      <p>Readability scoring could have been generated by an LLM the same way the rewrite and explanation features were. I pushed back on that: an LLM re-analyzing the same text twice could return a different result each time, and a compliance-facing score needs to stay consistent every time someone checks it. Working directly with engineering, we aligned on Flesch-Kincaid - a deterministic, well-established readability formula - to drive the actual score, and reserved AI specifically for the parts of the experience that benefited from it: the rewrite suggestions and the plain-language explanation of what the score meant.</p>
       <div class="tension-block">
-        <p class="tension-label">A UX problem I caught live, mid-demo</p>
-        <p>Walking engineering through the prototype in this same review, I caught that the page's layered scroll bars were burying the action buttons below the fold - a real usability risk that wouldn't have been obvious from a static mockup, only from actually walking through the flow live.</p>
+        <p class="tension-label"><strong>Always advocating for fixes</strong></p>
+        <p>Whenever there's an opportunity to advocate for correcting issues within the platform, I don't shy away from it. The scroll-bar problem was existing debt, so I recreated it within the prototype to make the case for fixing it. Although it was unlikely to be added to an already large scope, sharing fundamental issues with as many teams as possible increases the likelihood of it eventually getting prioritized.</p>
       </div>
     </div>
   </div>
@@ -243,7 +235,7 @@
       </div>
       <div class="principle-item">
         <span class="principle-num">05</span>
-        <div class="principle-text"><strong>Honest about its own limits</strong><span>Tone scoring can misfire depending on context - that limitation was built into the design conversation from the start, not discovered after launch.</span></div>
+        <div class="principle-text"><strong>Honest about its own limits</strong><span>Tone scoring can misfire depending on context - that limitation was built into the design conversation from the start.</span></div>
       </div>
     </div>
   </div>
@@ -253,7 +245,7 @@
     <p class="cs-block-tag">Outcome</p>
     <h2 class="cs-block-heading">Publicly launched, governance intact</h2>
     <div class="outcome-block">
-      <p>The AI Writing Companion suite launched publicly in December 2025 as part of Precisely's governed-AI push for EngageOne RapidCX. An internal AI best-practices workshop I led on this work was recognized by VP UX leadership as clearer and more rigorous than most external conference presentations on the same topic. As with much of the platform, the company doesn't yet track post-launch usage metrics - so I can't cite adoption numbers here. What I can speak to directly is the process: a governance model built into the product from its very first workshop, not bolted on afterward.</p>
+      <p>The AI Writing Companion suite launched publicly in December 2025 as part of Precisely's governed-AI push for EngageOne RapidCX. An internal AI best-practices workshop I led on this work was recognized by VP UX leadership as clearer and more rigorous than most external conference presentations on the same topic. The governance model behind it was established from the very first workshop and held consistent through launch.</p>
       <div class="cs-citations">
         <a href="https://www.precisely.com/press-release/precisely-brings-agentic-ai-to-engageone-rapidcx-customer-communications-platform/" class="cs-citation-link" target="_blank" rel="noopener">Read the launch press release ↗</a>
         <a href="https://www.aspireleaderboard.com/review-of-precisely" class="cs-citation-link" target="_blank" rel="noopener">Independent analyst review, Aspire Leaderboard ↗</a>

@@ -32,6 +32,7 @@
 /* TENSION CALLOUTS */
 .tension-block{background:var(--bg2);border:1px solid var(--border);border-left:2px solid var(--gold);padding:2.25rem 2.5rem;margin:2rem 0}
 .tension-label{font-size:.68rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.85rem}
+p.tension-label strong{color:var(--gold)}
 .tension-block p{margin-bottom:0;color:var(--fg2)}
 
 /* PROCESS STEPS */

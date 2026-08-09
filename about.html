@@ -25,10 +25,8 @@
 /* SKILLS */
 .skills-section{padding:7rem 0;border-bottom:1px solid var(--border)}
 .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
-.skill-card{padding:3rem 2.5rem;background:var(--bg2);border:1px solid var(--border);transition:border-color .3s;position:relative;overflow:hidden}
+.skill-card{padding:3rem 2.5rem;background:var(--bg2);border:1px solid var(--border);position:relative;overflow:hidden}
 .skill-card::before{content:'';position:absolute;inset:0;background:var(--gold-dim);transform:scaleY(0);transform-origin:bottom;transition:transform .4s}
-.skill-card:hover{border-color:var(--border2)}
-.skill-card:hover::before{transform:scaleY(1)}
 .skill-num{font-family:var(--display);font-size:3rem;color:var(--border);line-height:1;margin-bottom:1.5rem;position:relative}
 .skill-name{font-family:var(--display);font-size:1.2rem;color:var(--fg);margin-bottom:1rem;position:relative;letter-spacing:.03em}
 .skill-desc{font-size:.88rem;color:var(--fg2);line-height:1.8;font-weight:300;position:relative}
@@ -36,8 +34,7 @@
 /* TOOLKIT */
 .toolkit-section{padding:5rem 0;border-bottom:1px solid var(--border)}
 .toolkit-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
-.tool-pill{font-family:var(--display);font-size:.72rem;padding:.5rem 1.25rem;border:1px solid var(--border);color:var(--fg3);letter-spacing:.1em;text-transform:uppercase;transition:border-color .2s,color .2s,background .2s}
-.tool-pill:hover{border-color:var(--gold);color:var(--gold);background:var(--gold-dim)}
+.tool-pill{font-family:var(--display);font-size:.72rem;padding:.5rem 1.25rem;border:1px solid var(--border);color:var(--fg3);letter-spacing:.1em;text-transform:uppercase}
 
 .testimonials-section{padding:7rem 0;border-bottom:1px solid var(--border)}
 
