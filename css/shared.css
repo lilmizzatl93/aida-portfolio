@@ -20,7 +20,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 nav::before{content:'';position:absolute;top:0;left:0;right:0;height:160px;background:linear-gradient(to bottom,rgba(14,14,14,0.75) 0%,rgba(14,14,14,0.4) 55%,transparent 100%);pointer-events:none}
 .nav-name{font-family:var(--display);font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:0.03em;position:relative;z-index:1}
 .nav-links{display:flex;gap:2.5rem;list-style:none;position:relative;z-index:1}
-.nav-links a{font-size:0.78rem;font-weight:400;color:var(--fg2);text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;transition:color .2s;position:relative}
+.nav-links a{font-size:0.78rem;font-weight:400;color:var(--fg2);text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;transition:color .2s;position:relative;padding:.75rem .5rem;margin:-.75rem -.5rem;display:inline-block}
 .nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--gold);transition:width .3s}
 .nav-links a:hover,.nav-links a.active{color:var(--fg)}
 .nav-links a:hover::after,.nav-links a.active::after{width:100%}
