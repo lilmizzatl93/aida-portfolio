@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Onvation - Aïda Mokube</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Inter:wght@300;400;500&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<link rel="stylesheet" href="../css/case-study.css">
+<style>
+/* TWO-COLUMN IMAGE SECTIONS - one consistent pattern for the whole page */
+.cs-split{display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;align-items:start;padding:2.5rem 0;border-bottom:1px solid var(--border)}
+.cs-split.flip{grid-template-columns:1.2fr 1fr}
+.cs-split.flip .cs-split-img{order:2}
+.cs-split-img img{width:100%;height:auto;border-radius:8px;border:1px solid var(--border)}
+.cs-split-caption{font-size:.72rem;color:var(--fg3);font-style:italic;margin-top:.75rem;text-align:center}
+.cs-split p{font-size:.98rem;color:var(--fg2);line-height:1.9;font-weight:300;margin-bottom:1.4rem}
+@media(max-width:900px){
+  .cs-split,.cs-split.flip{grid-template-columns:1fr;gap:2rem}
+  .cs-split.flip .cs-split-img{order:0}
+}
+/* Onvation-only: 2-column Before/After (scoped locally, doesn't affect shared .process-steps elsewhere) */
+.ov-before-after{display:flex;flex-direction:column;gap:8px}
+@media(max-width:900px){.ov-before-after{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<nav>
+  <a href="../index.html" class="nav-name">Aïda Mokube</a>
+  <ul class="nav-links">
+    <li><a href="../index.html#work">Work</a></li>
+    <li><a href="../about.html">About Me</a></li>
+    <li><a href="../experience.html">Experience</a></li>
+    <li><a href="../leadership.html">Leadership</a></li>
+    <li><a href="../index.html#contact">Say hello 👋</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="cs-hero">
+  <div class="cs-hero-inner">
+    <a href="../index.html#work" class="cs-hero-back reveal">← Back to work</a>
+    <p class="cs-hero-tag reveal">Case Study 04 · IoT &amp; Mobile</p>
+    <h1 class="cs-hero-title reveal">Onvation Intelligent Washroom</h1>
+    <p class="cs-hero-sub reveal">A restroom management system for facility managers and custodial staff, deployed at the World Trade Center - my first UX role, where I designed a concept installer app myself and partnered with the lead designer on the core experience.</p>
+    <div class="cs-hero-meta reveal">
+      <div class="cs-meta-item"><div class="cs-meta-label">Company</div><div class="cs-meta-value">Kimberly-Clark Professional</div></div>
+      <div class="cs-meta-item"><div class="cs-meta-label">Role</div><div class="cs-meta-value">UX Digital Product Developer</div></div>
+      <div class="cs-meta-item"><div class="cs-meta-label">Timeline</div><div class="cs-meta-value">2019 – 2020</div></div>
+      <div class="cs-meta-item"><div class="cs-meta-label">Status</div><div class="cs-meta-value">Deployed, World Trade Center</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="cs-body">
+
+  <!-- WHAT IS ONVATION -->
+  <div class="cs-block reveal">
+    <p class="cs-block-tag">What Is Onvation</p>
+    <h2 class="cs-block-heading">Connecting restroom conditions to the people who maintain them</h2>
+    <p>Onvation is a restroom management system that helps facility managers and custodial staff improve how efficiently they stock restrooms - ultimately giving building patrons a seamless experience.</p>
+    <div class="principles-list">
+      <div class="principle-item">
+        <span class="principle-num">01</span>
+        <div class="principle-text"><strong>The Onvation System</strong><span>Paper and soap dispensers equipped with smart technology, feeding data to a web dashboard for facility managers and a mobile app for custodial staff.</span></div>
+      </div>
+      <div class="principle-item">
+        <span class="principle-num">02</span>
+        <div class="principle-text"><strong>The Onvation Dashboard</strong><span>A web app where facility managers monitor product usage, get low-product alerts, generate reports, and see projected run-out rates - giving them more purchasing insight than they'd ever had before.</span></div>
+      </div>
+      <div class="principle-item">
+        <span class="principle-num">03</span>
+        <div class="principle-text"><strong>The Onvation Mobile App</strong><span>An Android/Apple app built for custodial staff's fast-paced day, with built-in training videos, multi-language support, and a performance-tracking profile page with a light game-theory element.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ICON SELECTION / CUSTODIAL INTERVIEWS -->
+  <div class="cs-split reveal">
+    <div class="cs-split-img">
+      <img src="../images/onvation_custodial.png" alt="Custodial staff testing the priority-order icon">
+      <p class="cs-split-caption">Custodial staff testing the "in priority order" icon</p>
+    </div>
+    <div>
+      <p class="cs-block-tag">Interviews with Custodial Staff Members</p>
+      <h2 class="cs-block-heading">Settling a design disagreement with real users, not opinions</h2>
+      <p>On the mobile app's landing page, users can sort building alerts by floor or by a priority order driven by product run-out rate. When this was presented to the business and marketing team, a disagreement broke out over whether the icon representing "priority order" was actually clear to end users.</p>
+      <p>The business team wanted to pause the project until they could find an external customer to interview. I proposed an alternative: our own office campus had a building fully equipped with Onvation, alongside others still running the old dashboard-and-text-message system. That let us resolve the icon question quickly - and hear directly from real end users what they saw as the biggest improvement over the old system.</p>
+      <p>The harder part was earning trust. Custodial staff were often afraid that admitting confusion with the system would get back to their supervisor and put their job at risk. Being approachable, using plain language, and guaranteeing confidentiality let me get past that - and it surfaced something unexpected: some staff worried the system would be used specifically to identify and fire low performers. That insight directly changed how the sales team talked about the product going forward, away from "manage your team's performance" messaging that read as a threat.</p>
+    </div>
+  </div>
+  <img src="../images/onvation_custodial_2.png" alt="Custodial staff testing the priority-order icon, continued" style="width:100%;height:auto;border-radius:8px;border:1px solid var(--border);margin-bottom:2.5rem">
+
+  <!-- USER JOURNEYS -->
+  <div class="cs-block reveal" style="border-bottom:none;border-top:1px solid var(--border);padding-top:2.5rem">
+    <p class="cs-block-tag">Creating User Journeys</p>
+    <h2 class="cs-block-heading">Simplifying the installer workflow</h2>
+    <p>For every new feature request, I mapped the real steps a user had to take, then looked for ways to simplify the path to the same outcome. The clearest example: designing a dedicated mobile app for the installers who set up Onvation's smart devices on-site.</p>
+  </div>
+
+  <!-- INSTALLER APP / MARVELAPP -->
+ <div class="cs-split flip reveal" style="border-bottom:none;padding:0">
+    <div class="cs-split-img">
+      <img src="../images/onvation_installer.png" alt="Installer app concept, prototyped in MarvelApp">
+      <p class="cs-split-caption">Installer app concept, prototyped in MarvelApp</p>
+    </div>
+    <div>
+      <div class="ov-before-after">
+        <div class="process-step">
+          <p class="process-step-label">Before</p>
+          <h4>A slow, multi-step install process</h4>
+          <p>A team member manually recorded every smart device's MAC ID and organized boxes for delivery. A foreman installed the physical dispensers. A separate team member then built out the building's floors/restrooms/dispensers in the web app. Finally, a team of engineers had to visit in person just to connect the devices.</p>
+        </div>
+        <div class="process-step">
+          <p class="process-step-label">After</p>
+          <h4>A single, mobile-first flow</h4>
+          <p>A mobile app is more user-friendly for connecting smart devices than lugging around a laptop to place on bathroom surfaces. Simplifying the connection process and training foremen properly minimizes the number of trips to the customer site. Minimizing those trips directly reduces the business interruptions the customer incurs. Improving how device MAC IDs get recorded also frees up Kimberly-Clark team members' time for other tasks.</p>
+        </div>
+      </div>
+      <p class="cs-block-tag" style="margin-top:4rem">Sketches &amp; Wireframes - Installer App</p>
+      <h2 class="cs-block-heading">Designed and prototyped using self-taught tools</h2>
+    </div>
+  </div>
+  <div class="cs-block reveal" style="padding-top:20px">
+    <p>I wasn't given access to professional design software in this role, so I taught myself MarvelApp - a free prototyping tool - to design and prototype the installer app concept myself. Leadership at Kimberly-Clark preferred reviewing clickable, interactive prototypes over static sketches, so I built out low-fidelity flows they could actually click through.</p>
+    <p>The core decision I designed around: how should installers connect a new smart device to the system? I prototyped three distinct approaches for leadership to test hands-on - a QR code scan, a per-dispenser Bluetooth (BLE) connection, and a gateway-based connection - and watched them work through each one to see where real confusion, friction, or missing steps showed up.</p>
+  </div>
+
+  <!-- USER TESTING -->
+  <div class="cs-block reveal">
+    <p class="cs-block-tag">Conducting User Testing - Phoenix, AZ</p>
+    <h2 class="cs-block-heading">Planning and facilitating research on the core app</h2>
+    <p>Ahead of on-site Beta testing at customer locations in Arizona, I conducted a training session to get our business and sales teams comfortable demoing the system. Once the business team identified Beta customers, I supported onboarding and stayed in ongoing contact with them to collect feedback - a process that surfaced an unforeseen feature idea that later went into the patent process.</p>
+    <p>Once Beta customers had used the system long enough, I assisted in building the user testing plan for interviewing both custodial staff and facility managers. I collaborated with the team in planning the sessions, observed and took notes throughout.</p>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <div class="cs-block reveal">
+    <p class="cs-block-tag">Feedback From the Team</p>
+    <h2 class="cs-block-heading">What our leaders thought of my work</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial reveal">
+        <p class="testimonial-text">Thanks so much for taking the lead and proactively organizing the enhancement list.</p>
+        <p class="testimonial-source">Sr. Strategy Analyst · Kimberly-Clark Onvation</p>
+      </div>
+      <div class="testimonial reveal" style="transition-delay:.1s">
+        <p class="testimonial-text">Great work all around and a great story to tell.</p>
+        <p class="testimonial-source">Associate Director · Kimberly-Clark</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ISSA -->
+  <div class="cs-block reveal">
+    <p class="cs-block-tag">Beyond the Product</p>
+    <h2 class="cs-block-heading">Representing the work at ISSA</h2>
+    <p>I was selected to represent the Onvation booth at ISSA, an annual conference showcasing new products and innovations in the janitorial services industry. I shared the work directly with potential customers, watched them interact with the prototypes in real time, and helped bring on new customers by walking them through the system's benefits myself - my first experience showcasing designs to potential customers.</p>
+  </div>
+
+  <!-- OUTCOME -->
+  <div class="cs-block reveal">
+    <p class="cs-block-tag">Outcome</p>
+    <h2 class="cs-block-heading">Deployed where it needed to prove itself</h2>
+    <div class="outcome-block">
+      <p>The Onvation system was implemented at the World Trade Center - a genuinely high-profile, high-traffic environment for an early project. It was my introduction to design as a whole: the bridge from engineering to where I am today. That hybrid foundation - part design, part research, part self-directed technical learning - is still how I approach every project since.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="cs-next">
+  <p class="cs-next-label">Back to</p>
+  <a href="../index.html#work" class="cs-next-link">All Case Studies →</a>
+</div>
+
+<footer>
+  <span class="footer-copy">© 2026 · Open to new opportunities</span>
+  <a href="../Aida_Mokube_Resume_Long.pdf" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;font-size:.72rem;letter-spacing:.06em">Download Resume ↗</a>
+</footer>
+
+<script src="../js/shared.js"></script>
+</body>
+</html>

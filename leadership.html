@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leadership - Aïda Mokube</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Inter:wght@300;400;500&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/shared.css">
+<style>
+/* LEADERSHIP */
+.leadership-section{padding:7rem 0}
+.leadership-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:2rem}
+.leadership-card{padding:2.75rem;background:var(--bg2);border:1px solid var(--border);transition:border-color .3s}
+.leadership-card:hover{border-color:var(--border2)}
+.leadership-tag{font-size:.66rem;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);margin-bottom:.85rem}
+.leadership-card h3{font-family:var(--display);font-size:1.05rem;color:var(--fg);letter-spacing:.03em;margin-bottom:.85rem;line-height:1.3}
+.leadership-card p{font-size:.86rem;color:var(--fg2);line-height:1.8;font-weight:300}
+
+@media(max-width:900px){
+  .leadership-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<nav>
+  <a href="index.html" class="nav-name">Aïda Mokube</a>
+  <ul class="nav-links">
+    <li><a href="index.html#work">Work</a></li>
+    <li><a href="about.html">About Me</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="leadership.html" class="active">Leadership</a></li>
+    <li><a href="index.html#contact">Say hello 👋</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-grid">
+    <div>
+      <p class="page-hero-tag">Beyond the feature work</p>
+      <h1 class="page-hero-title">Leadership.</h1>
+    </div>
+    <p class="page-hero-sub">The initiatives that changed how a team works, not just what shipped. Building the people around me matters to me as much as building the product.</p>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="leadership-section">
+    <div class="leadership-grid">
+      <div class="leadership-card reveal">
+        <p class="leadership-tag">Research &amp; Strategy</p>
+        <h3>Self-Serviceability Alignment Research</h3>
+        <p>I designed and individually moderated a cross-functional study - 8 participants, 6 functions, ~400 minutes of sessions - to resolve a genuine strategic disagreement about the platform's self-service direction. I found that perceived self-serviceability of our platform had declined between platform generations (3.2 to 3.0 on a 5-point scale). I synthesized an alignment on a 4.6 target for RapidBoost, the platform's Angular rebuild - highlighting a key finding that internal self-serviceability should serve as a leading indicator for external self-serviceability.</p>
+      </div>
+      <div class="leadership-card reveal" style="transition-delay:.1s">
+        <p class="leadership-tag">Enablement</p>
+        <h3>Internship Program (HR-Adopted)</h3>
+        <p>I built a complete UX design internship program from scratch, including a structured onboarding guide, a three-phase expectations framework, and a formal 5-competency evaluation rubric. I personally ran the full hiring cycle, from resume review through interviewing candidates and making the hiring decision. HR reached out specifically to request the materials in order to adapt them into the official intern management processes for managers company-wide. My intern rated the onboarding documentation a "100/10" on the final evaluation.</p>
+      </div>
+      <div class="leadership-card reveal" style="transition-delay:.2s">
+        <p class="leadership-tag">Technical Leadership</p>
+        <h3>Angular Transition &amp; Responsivity Guidelines</h3>
+        <p>I led a structured, cross-team UX debt audit workshop ahead of the platform's migration from JSP to Angular for RapidBoost - collecting pain points from every designer, grouping them into named risk areas, and rolling individual rankings into one consensus priority list. This surfaced the technical debt driving the migration before leadership formally acted on it. Separately, I completed advanced Figma prototyping training focused on responsive design. I then proposed new platform-wide responsivity guidelines to the Director of Engineering mapping Figma's Autolayout directly to its CSS flexbox equivalent - utilizing Figma Dev Mode.</p>
+      </div>
+      <div class="leadership-card reveal" style="transition-delay:.3s">
+        <p class="leadership-tag">Enablement</p>
+        <h3>AI Prompt Library &amp; Enablement Resource</h3>
+        <p>My manager challenged the designers to experiment with "vibecoding" solutions using tools like Claude and GitHub Copilot, so the team could push platform improvements without waiting on engineering bandwidth. As a brand-new practice for the team, there was no real playbook yet - and I wasn't the only one figuring it out as I went. I was also concerned about the environmental cost of unguided AI trial-and-error. So I built a team-wide prompt library and resource hub with curated training content and reusable prompts - to reduce redundant experimentation across design and product.</p>
+      </div>
+      <div class="leadership-card reveal" style="transition-delay:.4s">
+        <p class="leadership-tag">Stakeholder Strategy</p>
+        <h3>Collaborator Personas Framework</h3>
+        <p>I adapted a stakeholder-influence framework from an industry conference for our team. It includes stakeholder personas like Data-Driven David (who needs the full reasoning chain to be convinced) and Risk-Averse Rachel (who needs boundaries set early). It also includes an org chart tracking each group's UX relationship-building progress as many had no prior experience working with UX. The framework also has a structured set of questions to consider before any project kickoff. The team continues to use this language when planning how to approach specific stakeholders.</p>
+      </div>
+      <div class="leadership-card reveal" style="transition-delay:.5s">
+        <p class="leadership-tag">Storytelling &amp; Influence</p>
+        <h3>Executive Storytelling &amp; Stakeholder Influence</h3>
+        <p>I love presenting. Understanding who's in the room and why shapes everything about how I tell a story - whether that's a client, a Sr. VP, or a room of engineers. I break complex ideas down so they're easy to follow. I build in interactivity to keep things fun and memorable, not just informative. I take people along the actual design journey, including the parts that didn't work, without ever making it about blame. That's presenting done right: everyone leaves with real understanding, not just a summary.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-copy">© 2026 · Open to new opportunities</span>
+  <a href="Aida_Mokube_Resume_Long.pdf" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;font-size:.72rem;letter-spacing:.06em">Download Resume ↗</a>
+</footer>
+
+<script src="js/shared.js"></script>
+</body>
+</html>

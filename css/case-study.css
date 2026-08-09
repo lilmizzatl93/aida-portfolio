@@ -1,0 +1,64 @@
+/* CASE STUDY HERO */
+.cs-hero{padding:10rem 3.5rem 5rem;border-bottom:1px solid var(--border);position:relative}
+.cs-hero-inner{max-width:1000px;margin:0 auto}
+.cs-hero-back{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fg3);text-decoration:none;margin-bottom:2.5rem;transition:color .2s}
+.cs-hero-back:hover{color:var(--gold)}
+.cs-hero-tag{font-size:.72rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem}
+.cs-hero-title{font-family:var(--display);font-size:clamp(2.6rem,6vw,5rem);color:var(--fg);letter-spacing:0.01em;line-height:1.05;margin-bottom:1.5rem}
+.cs-hero-sub{font-size:1.15rem;color:var(--fg2);line-height:1.7;font-weight:300;margin-bottom:2.5rem}
+.cs-hero-meta{display:flex;flex-wrap:wrap;gap:2.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+.cs-meta-item{}
+.cs-meta-label{font-size:.66rem;letter-spacing:.15em;text-transform:uppercase;color:var(--fg3);margin-bottom:.4rem}
+.cs-meta-value{font-size:.9rem;color:var(--fg);font-weight:400}
+
+/* CASE STUDY BODY */
+.cs-body{max-width:1000px;margin:0 auto}
+.cs-block{padding:2.5rem 0;border-bottom:1px solid var(--border)}
+.cs-block:last-child{border-bottom:none}
+.cs-block-tag{font-size:.68rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.cs-block-heading{font-family:var(--display);font-size:clamp(1.6rem,3vw,2.4rem);color:var(--fg);letter-spacing:0.01em;line-height:1.15;margin-bottom:1.75rem}
+.cs-block p{font-size:.98rem;color:var(--fg2);line-height:1.9;font-weight:300;margin-bottom:1.4rem}
+.cs-block p strong{color:var(--fg);font-weight:500}
+.cs-block p em{font-family:var(--italic);font-style:italic;color:var(--fg)}
+
+/* PRINCIPLES LIST */
+.principles-list{margin-top:2rem;display:flex;flex-direction:column;gap:1.5px}
+.principle-item{display:grid;grid-template-columns:60px 1fr;gap:2rem;padding:1.75rem 0;border-bottom:1px solid var(--border)}
+.principle-item:last-child{border-bottom:none}
+.principle-num{font-family:var(--display);font-size:1.4rem;color:var(--border2)}
+.principle-text strong{display:block;color:var(--fg);font-size:.98rem;margin-bottom:.35rem;font-weight:500}
+.principle-text span{font-size:.9rem;color:var(--fg2);line-height:1.7;font-weight:300}
+
+/* TENSION CALLOUTS */
+.tension-block{background:var(--bg2);border:1px solid var(--border);border-left:2px solid var(--gold);padding:2.25rem 2.5rem;margin:2rem 0}
+.tension-label{font-size:.68rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.85rem}
+.tension-block p{margin-bottom:0;color:var(--fg2)}
+
+/* PROCESS STEPS */
+.process-steps{margin-top:2rem;display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.process-step{padding:2rem 2.25rem;background:var(--bg2);border:1px solid var(--border)}
+.process-step-label{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:.6rem}
+.process-step h4{font-family:var(--display);font-size:1rem;color:var(--fg);margin-bottom:.6rem;letter-spacing:-.005em}
+.process-step p{font-size:.88rem;margin-bottom:0}
+
+/* OUTCOME */
+.outcome-block{background:var(--bg2);border:1px solid var(--border);padding:3rem}
+
+/* NEXT CASE STUDY NAV */
+.cs-next{padding:5rem 3.5rem;border-top:1px solid var(--border);text-align:center}
+.cs-next-label{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--fg3);margin-bottom:1rem}
+.cs-next-link{font-family:var(--display);font-size:clamp(1.8rem,4vw,3rem);color:var(--fg);text-decoration:none;letter-spacing:0.01em;transition:color .2s}
+.cs-next-link:hover{color:var(--gold)}
+
+@media(max-width:900px){
+  .cs-hero{padding:7rem 1.5rem 4rem}
+  .cs-body{padding:0 1.5rem}
+  .cs-hero-meta{gap:1.5rem}
+  .principle-item{grid-template-columns:40px 1fr;gap:1rem}
+  .cs-next{padding:4rem 1.5rem}
+}
+
+/* CITATIONS */
+.cs-citations{margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:1.5rem}
+.cs-citation-link{font-size:.72rem;letter-spacing:.06em;color:var(--gold);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
+.cs-citation-link:hover{border-color:var(--gold)}

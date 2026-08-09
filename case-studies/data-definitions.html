@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Definitions - Aïda Mokube</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Inter:wght@300;400;500&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<link rel="stylesheet" href="../css/case-study.css">
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<nav>
+  <a href="../index.html" class="nav-name">Aïda Mokube</a>
+  <ul class="nav-links">
+    <li><a href="../index.html#work">Work</a></li>
+    <li><a href="../about.html">About Me</a></li>
+    <li><a href="../experience.html">Experience</a></li>
+    <li><a href="../leadership.html">Leadership</a></li>
+    <li><a href="../index.html#contact">Say hello 👋</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="cs-hero">
+  <div class="cs-hero-inner">
+    <a href="../index.html#work" class="cs-hero-back reveal">← Back to work</a>
+    <p class="cs-hero-tag reveal">Case Study 03 · Scope Discipline &amp; Process</p>
+    <h1 class="cs-hero-title reveal">Data Definitions</h1>
+    <p class="cs-hero-sub reveal">A foundational feature where I built the case for a disciplined MVP, catching cross-feature risks before they became problems.</p>
+    <div class="cs-hero-meta reveal">
+      <div class="cs-meta-item"><div class="cs-meta-label">Company</div><div class="cs-meta-value">Precisely</div></div>
+      <div class="cs-meta-item"><div class="cs-meta-label">Role</div><div class="cs-meta-value">UX Designer → Sr. UX Designer</div></div>
+      <div class="cs-meta-item"><div class="cs-meta-label">Timeline</div><div class="cs-meta-value">2023</div></div>
+      <div class="cs-meta-item"><div class="cs-meta-label">Status</div><div class="cs-meta-value">Shipped, Audit Closed Jan 2025</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="cs-body">
+
+  <!-- A NOTE ON FRAMING -->
+  <div class="cs-block reveal">
+    <p class="cs-block-tag">A Note Before You Read This One</p>
+    <h2 class="cs-block-heading">This isn't a clean-win story, and I'd rather be upfront about that</h2>
+    <p>Data Definitions is a feature I'm honest with myself about - the shipped result doesn't fully reflect the design thinking that went into it. What follows is the range of exploration, the real technical decisions, and a scope-discipline story I'm genuinely proud of, alongside an honest account of where the process broke down. I think that's a more useful thing to show than a polished win would be.</p>
+  </div>
+
+  <!-- THE FEATURE -->
+  <div class="cs-block reveal">
+    <p class="cs-block-tag">The Feature</p>
+    <h2 class="cs-block-heading">A technically dense, foundational capability</h2>
+    <p>Data Definitions lets an internal persona connect a client's received JSON/XML data file to the platform, defining each field's name, type, format, and default so other parts of the system - tables, charts, personalized communications - can use that data. It's foundational: several other features depend on it working correctly.</p>
+  </div>
+
+  <!-- DESIGN PROCESS -->
+  <div class="cs-block reveal">
+    <p class="cs-block-tag">Design Process</p>
+    <h2 class="cs-block-heading">Real iteration, negotiated with engineering in good faith</h2>
+    <p>Across three rounds of design check-ins, I worked through the full scope of the feature systematically - proposing simplifications, deferring things deliberately with reasons, and asking pointed technical questions instead of guessing.</p>
+    <div class="process-steps">
+      <div class="process-step">
+        <p class="process-step-label">Landing &amp; Searching</p>
+        <h4>Reusing an existing pattern to reduce new engineering surface area</h4>
+        <p>Modeled search/filter behavior on the existing Customer Archive pattern, and proposed eliminating a redundant "exact match" search once better filtering was in place.</p>
+      </div>
+      <div class="process-step">
+        <p class="process-step-label">Editing &amp; Safeguards</p>
+        <h4>A technical safeguard built directly into the design</h4>
+        <p>Designed a stable "Rapid ID" per data definition so edits wouldn't silently break existing connections, and worked out a nuanced used-vs-unused editing rule set with engineering.</p>
+      </div>
+      <div class="process-step">
+        <p class="process-step-label">Evidence Over Guessing</p>
+        <h4>An engineering-sourced nesting-depth spec</h4>
+        <p>Rather than picking an arbitrary limit, I asked engineering directly what the max practical nesting depth should be - a named engineer answered from real experience, and that number became the aligned spec.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- DELETION RISK -->
+  <div class="cs-block reveal">
+    <p class="cs-block-tag">Evidence-Based Decision-Making</p>
+    <h2 class="cs-block-heading">Settling a contentious question with evidence, not opinion</h2>
+    <p>Rather than deciding solo on whether users should be able to delete a data definition, I traced the actual downstream failure mode - a deleted definition already in use could break the active communication template's rules screen entirely, an orphaned record with no mapping back to what used it. I backed this with a real reproduced bug and gathered direct, attributed input from two senior stakeholders before the decision was made.</p>
+  </div>
+
+  <!-- SCOPE NEGOTIATION -->
+  <div class="cs-block reveal">
+    <p class="cs-block-tag">The Strongest Material</p>
+    <h2 class="cs-block-heading">Forcing a data-grounded MVP decision when scope and timeline drifted apart</h2>
+    <p>Partway through the project, scope and delivery timelines drifted out of alignment - things I'd already flagged as out-of-scope kept resurfacing as if they were still open, against a delivery date that had already been promised. Rather than keep re-litigating it informally, I built a comprehensive, function-by-function scope breakdown: every piece of functionality sized, estimated in sprints, and tagged as required or future enhancement - and critically, every single item I cut came paired with a concrete workaround, so nothing was simply dropped without an interim path.</p>
+    <p>I also traced where this feature's requirements would ripple into features that had <em>already shipped</em> - flagging a nesting-depth mismatch with an already-live dependent feature before it could surface as a production bug. That document became the basis for a cross-level working session - the right people in the room, at the right level - to drive a real, shared, data-grounded decision on what MVP actually meant.</p>
+  </div>
+
+  <!-- HONEST OUTCOME -->
+  <div class="cs-block reveal">
+    <p class="cs-block-tag">Honest Outcome</p>
+    <h2 class="cs-block-heading">What shipped, and what I still caught afterward</h2>
+    <div class="outcome-block">
+      <p>The version that shipped doesn't fully reflect the design intent captured above - real organizational constraints meant several planned pieces were cut without the follow-through they deserved. What I can point to with real pride: I personally closed the feature's later UX audit and caught a real inconsistency - a documented viewing limit that had silently changed from 250 to 1000 without design ever being informed - and pushed the fix to production myself. The paper trail on that catch is dated and exact, not reconstructed after the fact.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="cs-next">
+  <p class="cs-next-label">Next case study</p>
+  <a href="onvation.html" class="cs-next-link">Onvation →</a>
+</div>
+
+<footer>
+  <span class="footer-copy">© 2026 · Open to new opportunities</span>
+  <a href="../Aida_Mokube_Resume_Long.pdf" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;font-size:.72rem;letter-spacing:.06em">Download Resume ↗</a>
+</footer>
+
+<script src="../js/shared.js"></script>
+</body>
+</html>

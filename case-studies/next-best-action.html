@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Next Best Action - Aïda Mokube</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Inter:wght@300;400;500&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<link rel="stylesheet" href="../css/case-study.css">
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<nav>
+  <a href="../index.html" class="nav-name">Aïda Mokube</a>
+  <ul class="nav-links">
+    <li><a href="../index.html#work">Work</a></li>
+    <li><a href="../about.html">About Me</a></li>
+    <li><a href="../experience.html">Experience</a></li>
+    <li><a href="../leadership.html">Leadership</a></li>
+    <li><a href="../index.html#contact">Say hello 👋</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="cs-hero">
+  <div class="cs-hero-inner">
+    <a href="../index.html#work" class="cs-hero-back reveal">← Back to work</a>
+    <p class="cs-hero-tag reveal">Case Study 02 · AI / UX Governance</p>
+    <h1 class="cs-hero-title reveal">Next Best Action</h1>
+    <p class="cs-hero-sub reveal">Sole designer for an AI recommendation engine built on one clear promise: it tells you what to do next, it doesn't do it for you.</p>
+    <div class="cs-hero-meta reveal">
+      <div class="cs-meta-item"><div class="cs-meta-label">Company</div><div class="cs-meta-value">Precisely</div></div>
+      <div class="cs-meta-item"><div class="cs-meta-label">Role</div><div class="cs-meta-value">Sr. UX Designer · Sole Designer</div></div>
+      <div class="cs-meta-item"><div class="cs-meta-label">Timeline</div><div class="cs-meta-value">Jan 2026 – Present</div></div>
+      <div class="cs-meta-item"><div class="cs-meta-label">Status</div><div class="cs-meta-value">Publicly Launched, Apr 2026</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="cs-body">
+
+  <!-- PROBLEM -->
+  <div class="cs-block reveal">
+    <p class="cs-block-tag">The Problem</p>
+    <h2 class="cs-block-heading">Users had the data, but no clear path from data to action</h2>
+    <p>Users managing customer communications had to manually piece together engagement signals - open rates, click rates, delivery performance - across scattered dashboards to figure out what to change and why. The process was slow, inconsistent, and reactive: teams relied on trial-and-error and intuition rather than any repeatable way to translate performance data into action.</p>
+  </div>
+
+  <!-- FRAMING -->
+  <div class="cs-block reveal">
+    <p class="cs-block-tag">Framing the Work</p>
+    <h2 class="cs-block-heading">A recommendation engine, not an automation system</h2>
+    <p>Early in the project, I helped the team align on a core framing - <strong>"AI tells you what to do next," not "AI does it for you"</strong> - and held that line throughout, even as the underlying models matured. Recommendations are advisory only; users decide what to act on, and nothing executes automatically on a user's behalf.</p>
+    <p>I designed explicitly for low-confidence and cold-start states, since the underlying models only had access to delivery signals and template metadata - no recipient-level data, no downstream outcome signal beyond opens and clicks. Getting the confidence story right mattered as much as getting the recommendation right.</p>
+  </div>
+
+  <!-- PROCESS -->
+  <div class="cs-block reveal">
+    <p class="cs-block-tag">Process</p>
+    <h2 class="cs-block-heading">Facilitating alignment under real deadline pressure</h2>
+    <p>I designed and facilitated a cross-functional Insights Workshop to align stakeholders on scope and define the Minimal Releasable Product. To make an abstract principle land with a room of engineers and stakeholders, I used a real, self-sourced case study - the early, trust-damaging rollout of Microsoft Teams meeting transcripts - to show that good technology can still fail to earn adoption if trust isn't designed for. It reframed the room's conversation from "is the model good enough" to "will people actually use this."</p>
+  </div>
+
+  <!-- TENSIONS NAVIGATED -->
+  <div class="cs-block reveal">
+    <p class="cs-block-tag">Real Tensions, Navigated in Real Time</p>
+    <h2 class="cs-block-heading">Tracking the product's integrity under pressure</h2>
+
+    <div class="tension-block">
+      <p class="tension-label">A scope cut, and making its cost visible</p>
+      <p>A technical platform constraint (the Angular UI couldn't embed into the platform's older JSP pages) forced a pivot from an all-pages floating panel down to a homepage-only placement for MVP. Rather than let that read as a routine scope trim, I documented the real cost: reduced contextual relevance, weaker perceived value, and a design-consistency break with a related in-flight AI project depending on the same floating-panel pattern.</p>
+    </div>
+
+    <div class="tension-block">
+      <p class="tension-label">Catching a regression against our own principles</p>
+      <p>I identified that the MVP build was sharing recommendation-dismissal state across every user in a tenant - meaning one person's dismissal silently removed a recommendation for everyone else. That directly contradicted an earlier team alignment that each user should control their own view. I flagged it explicitly rather than letting a technical shortcut quietly override a commitment we'd already made to users.</p>
+    </div>
+
+    <div class="tension-block">
+      <p class="tension-label">An accessibility catch, after the fact</p>
+      <p>When a scope change moved a notification indicator from the dark navigation bar to a lighter page background, I caught that it lost the contrast it needed to remain accessible - a case of continuing to audit a design through a pivot, not just at the original handoff.</p>
+    </div>
+  </div>
+
+  <!-- OUTCOME -->
+  <div class="cs-block reveal">
+    <p class="cs-block-tag">Outcome</p>
+    <h2 class="cs-block-heading">Launched, with its governance line held</h2>
+    <div class="outcome-block">
+      <p>Next Best Action launched publicly in April 2026 as part of Precisely's governed-AI push for EngageOne RapidCX. As with the AI Writing Companion suite, the company doesn't yet track post-launch usage metrics, so I can't cite adoption numbers. What I can speak to directly is the process of building it responsibly under real technical and organizational pressure - and the specific judgment calls, documented in real time, that made that possible.</p>
+      <div class="cs-citations">
+        <a href="https://www.precisely.com/press-release/precisely-engageone-rapidcx-spring/" class="cs-citation-link" target="_blank" rel="noopener">Read the launch press release ↗</a>
+        <a href="https://www.aspireleaderboard.com/review-of-precisely" class="cs-citation-link" target="_blank" rel="noopener">Independent analyst review, Aspire Leaderboard ↗</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="cs-next">
+  <p class="cs-next-label">Next case study</p>
+  <a href="data-definitions.html" class="cs-next-link">Data Definitions →</a>
+</div>
+
+<footer>
+  <span class="footer-copy">© 2026 · Open to new opportunities</span>
+  <a href="../Aida_Mokube_Resume_Long.pdf" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;font-size:.72rem;letter-spacing:.06em">Download Resume ↗</a>
+</footer>
+
+<script src="../js/shared.js"></script>
+</body>
+</html>

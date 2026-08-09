@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Writing Companion - Aïda Mokube</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Inter:wght@300;400;500&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<link rel="stylesheet" href="../css/case-study.css">
+<style>
+.cs-split{display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;align-items:start;padding:2.5rem 0;border-bottom:1px solid var(--border)}
+.cs-split.flip{grid-template-columns:1.2fr 1fr}
+.cs-split.flip .cs-split-img{order:2}
+.cs-split-img img{width:100%;height:auto;border-radius:8px;border:1px solid var(--border)}
+.cs-split-img .photo-frame,.photo-frame{width:100%;aspect-ratio:4/3;background:var(--bg3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem}
+.cs-split-caption{font-size:.72rem;color:var(--fg3);font-style:italic;margin-top:.75rem;text-align:center}
+.cs-split p{font-size:.98rem;color:var(--fg2);line-height:1.9;font-weight:300;margin-bottom:1.4rem}
+.pull-quote{border-left:2px solid var(--gold);padding:1.25rem 0 1.25rem 1.75rem;margin:2rem 0}
+.pull-quote p{font-family:var(--italic);font-style:italic;font-size:1.2rem;color:var(--fg);line-height:1.6;margin-bottom:0;max-width:none}
+.cs-compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:2rem}
+.cs-compare-grid .photo-frame{aspect-ratio:3/4}
+@media(max-width:900px){.cs-compare-grid{grid-template-columns:1fr}}
+@media(max-width:900px){
+  .cs-split,.cs-split.flip{grid-template-columns:1fr;gap:2rem}
+  .cs-split.flip .cs-split-img{order:0}
+}
+</style>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<nav>
+  <a href="../index.html" class="nav-name">Aïda Mokube</a>
+  <ul class="nav-links">
+    <li><a href="../index.html#work">Work</a></li>
+    <li><a href="../about.html">About Me</a></li>
+    <li><a href="../experience.html">Experience</a></li>
+    <li><a href="../leadership.html">Leadership</a></li>
+    <li><a href="../index.html#contact">Say hello 👋</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="cs-hero">
+  <div class="cs-hero-inner">
+    <a href="../index.html#work" class="cs-hero-back reveal">← Back to work</a>
+    <p class="cs-hero-tag reveal">Case Study 01 · AI / UX Governance</p>
+    <h1 class="cs-hero-title reveal">AI Writing Companion</h1>
+    <p class="cs-hero-sub reveal">A three-agent AI writing suite, and the project where I defined what "trustworthy AI" looks like in a highly regulated industry. Those principles were highlighted in the Aspire review of Precisely, and I carry them into every AI feature.</p>
+    <div class="cs-hero-meta reveal">
+      <div class="cs-meta-item"><div class="cs-meta-label">Company</div><div class="cs-meta-value">Precisely</div></div>
+      <div class="cs-meta-item"><div class="cs-meta-label">Role</div><div class="cs-meta-value">Sr. UX Designer · Sole Designer</div></div>
+      <div class="cs-meta-item"><div class="cs-meta-label">Timeline</div><div class="cs-meta-value">Oct 2025 – Dec 2025</div></div>
+      <div class="cs-meta-item"><div class="cs-meta-label">Status</div><div class="cs-meta-value">Publicly Launched, Dec 2025</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="cs-body">
+
+  <!-- PROBLEM -->
+  <div class="cs-block reveal">
+    <p class="cs-block-tag">The Problem</p>
+    <h2 class="cs-block-heading">Helping Joey craft better templates, faster</h2>
+    <p>Template designers - covered by our Joey persona - usually receive requests to update communications via email. These requests could be either a full rewrite, or notes on specific areas that need updating. From there, Joey has to match the new content to existing mockups under real deadline pressure, often facing a hard truth:</p>
+    <div class="pull-quote">
+      <p>"People expect communications to be updated faster than we can actually make the changes."</p>
+    </div>
+    <p>The advancements brought about with AI in content-creation tools opened this opportunity for Joey to get to a better result faster - not by replacing his judgment, but by supporting his workflow seamlessly.</p>
+  </div>
+
+  <!-- WHAT WE WERE / WEREN'T BUILDING -->
+  <div class="cs-block reveal">
+    <p class="cs-block-tag">Framing the Work</p>
+    <h2 class="cs-block-heading">Defining what we're building despite ambiguity</h2>
+    <p>I made one principle non-negotiable from the earliest workshop: this suite should <strong>support</strong> the template designer's judgment, not replace it. Enabling the tone and/or readability agents lets the AI assess and score Joey's content, giving him suggestions he can act on himself. If his organization also enables the rewrite agent, it takes those suggestions and generates a complete rewrite of that section. Joey can then accept it, reject it, generate a new version, or edit the rewrite himself before accepting. Either way, a human always reviews and approves before anything ships. That distinction shaped every design decision that followed.</p>
+    <div class="tension-block">
+      <p class="tension-label"><strong>Influencing the roadmap with clarity</strong></p>
+      <p>This feature was originally scoped to include two use cases: Joey's template design work, and a second one for Cody, a customer service rep handling outgoing communications. When I joined the project in October, I assessed where things actually stood and raised a direct concern: the Cody use case likely wasn't feasible within our timeline. I recommended cutting it from scope, and the team agreed. Keeping the suite focused on Joey's workflow first, rather than stretching thin across two, was a scope call as much as a design one.</p>
+    </div>
+  </div>
+
+  <!-- THE EXPERIENCE -->
+  <div class="cs-block reveal" style="border-bottom:none;padding-bottom:0">
+    <p class="cs-block-tag">The Experience</p>
+    <h2 class="cs-block-heading">The AI writing suite at work</h2>
+  </div>
+  <div class="cs-split reveal" style="align-items:stretch;padding-top:1.5rem">
+    <div class="cs-split-img" style="display:flex;flex-direction:column;justify-content:flex-end">
+      <div class="photo-frame">
+        <svg width="48" height="48" fill="none" stroke="rgba(240,237,232,0.2)" stroke-width="1.2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        <span style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--fg3)">Add video - tone and readability walkthrough</span>
+      </div>
+      <p class="cs-split-caption">Tone and readability, with the rewrite button visible</p>
+      <div class="photo-frame" style="margin-top:1.5rem">
+        <svg width="48" height="48" fill="none" stroke="rgba(240,237,232,0.2)" stroke-width="1.2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        <span style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--fg3)">Add video - rewrite flow, hover to show AI Assisted vs AI Generated chip</span>
+      </div>
+      <p class="cs-split-caption">AI Assisted vs. AI Generated, shown on hover</p>
+    </div>
+    <div>
+      <p>Following our guiding principle, the AI writing suite acts as a companion to Joey - its integration into his workflow was designed to be as seamless as possible. Once Joey finishes a new version of a communication, hitting submit runs the initial AI scan. Joey sees an AI Insights modal summarizing what could be improved, with the option to review or ignore the findings - keeping him in control either way. If he chooses to review, he's returned to the template, where flagged text blocks appear directly in the canvas: yellow for sections that could use work, purple for sections already scoring well. Joey can dismiss purple chips from his own view to reduce noise on the canvas. If another user opens the same template, they still see that purple chip and can dismiss it for themselves.</p>
+      <p>If the rewrite agent is enabled, Joey sees a button to rewrite the flagged content. Clicking it opens a dedicated text editor panel showing the score and reasoning behind the original text, with the original kept in a collapsible section for reference and the suggested rewrite shown directly. From there, Joey can edit the rewrite, generate a new one, keep the original, or accept the rewrite as-is. If he accepts without editing, that block is marked with an "AI Generated" chip; if he edits it first, it's marked "AI Assisted" instead. This distinction was added specifically to support the governance layer - people tend to trust content a human has reviewed and edited more than something accepted from AI without changes. Flagging that difference lets whoever approves the content know exactly which sections might deserve a closer look.</p>
+    </div>
+  </div>
+
+  <!-- CUSTOMIZABILITY -->
+  <div class="cs-block reveal">
+    <p class="cs-block-tag">Built-In Customizability</p>
+    <h2 class="cs-block-heading">Tone and readability, together or independent</h2>
+    <p>Research surfaced that some of our clients were averse to using AI at all given how highly regulated their industries are. Forcing an all-or-nothing choice risked losing their trust before they'd even tried it. So every AI feature was built to be toggled independently, letting cautious clients opt in gradually instead of all at once. Tone, readability, and rewrite can each be turned on or off on their own - six possible configurations, from none of it to all of it. The two shown below sit at opposite ends of that range: tone analysis running completely on its own, and readability analysis running completely on its own. The fullest configuration - tone and readability together, with rewrite enabled - is the one shown in the walkthrough above. That level of control wasn't just a technical nice-to-have - it was part of how we earned trust in AI, one feature at a time.</p>
+    <div class="cs-compare-grid">
+      <div>
+        <div class="photo-frame">
+          <svg width="48" height="48" fill="none" stroke="rgba(240,237,232,0.2)" stroke-width="1.2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <span style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--fg3)">Add tone-only screenshot</span>
+        </div>
+        <p class="cs-split-caption">Tone analysis only</p>
+      </div>
+      <div>
+        <div class="photo-frame">
+          <svg width="48" height="48" fill="none" stroke="rgba(240,237,232,0.2)" stroke-width="1.2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <span style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--fg3)">Add readability-only screenshot</span>
+        </div>
+        <p class="cs-split-caption">Readability analysis only</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- REGULATORY RISK -->
+  <div class="cs-block reveal" style="border-bottom:none">
+    <div class="tension-block">
+      <p class="tension-label"><strong>Identifying regulatory risks the requirements missed</strong></p>
+      <p>Reviewing the requirements with a clear understanding of our users and the regulated industries they operate in, I flagged a missing safeguard. Many of our clients work under complex governance processes before copy ever reaches Joey. Certain text blocks - legal language, for example - can't be altered, and must be written exactly as approved. Without a locking mechanism, AI-driven analysis could still flag those sections and offer a rewrite. If Joey accepted it, that would undo work that had already cleared approval outside the platform entirely. I called out the risk directly: our clients could be fined. That risk reshaped the product's design principles, and pivoted an approach engineering had already started before UX was involved.</p>
+    </div>
+  </div>
+
+  <!-- PROTOTYPE WALKTHROUGH -->
+  <div class="cs-split flip reveal">
+    <div class="cs-split-img">
+      <div class="photo-frame">
+        <svg width="48" height="48" fill="none" stroke="rgba(240,237,232,0.2)" stroke-width="1.2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        <span style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--fg3)">Add prototype walkthrough video - locking mechanism in action</span>
+      </div>
+      <p class="cs-split-caption">Excluding a block from AI analysis, after the initial scan</p>
+    </div>
+    <div>
+      <p class="cs-block-tag">Seeing the Safeguard in Action</p>
+      <h2 class="cs-block-heading">The locking mechanism</h2>
+      <p>After I flagged this concern, the team unanimously aligned to bring it into scope. I designed the ability to exclude specific text blocks from AI analysis entirely. This works two ways: before the initial AI scan, when a user submits their completed work as a new version, or after the scan, in case Joey forgot to exclude something the first time. The video alongside this section shows the after-the-scan flow. Once a section is excluded, its scores are removed from the overall template score. Stakeholders recognized how important this safeguard was, and responded well to how simple my design proposal implementation turned out to be.</p>
+    </div>
+  </div>
+
+  <!-- WORKSHOP VISUAL -->
+  <div class="cs-split reveal">
+    <div class="cs-split-img">
+      <div class="photo-frame">
+        <svg width="48" height="48" fill="none" stroke="rgba(240,237,232,0.2)" stroke-width="1.2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--fg3)">Add Miro board screenshot from the kickoff workshop</span>
+      </div>
+      <p class="cs-split-caption">"Stepping into Joey's Shoes" - kickoff workshop, Oct 15</p>
+    </div>
+    <div>
+      <p class="cs-block-tag">Inside the Kickoff Workshop</p>
+      <h2 class="cs-block-heading">Making the persona's frustration visible to the whole room</h2>
+      <p>The persona-empathy exercise wasn't just a slide - the team worked through Joey's actual day together on a shared board, mapping every point of friction: the repetitive proofing and governance work, the difficulty finding where to make a needed change, compliance unable to get the information they needed. Having the whole room build that picture together, rather than reading it in a doc, is what made the research stick through everything that followed.</p>
+    </div>
+  </div>
+
+  <!-- SKETCH REVIEW DETAIL -->
+  <div class="cs-block reveal">
+    <p class="cs-block-tag">Oct 24 Sketch Review</p>
+    <h2 class="cs-block-heading">Real tensions I had to design around, not just execute past</h2>
+    <p>Beyond the trust framing, the sketch review surfaced specific decisions with real tradeoffs - the kind that don't have an obviously correct answer, just a reasoned one.</p>
+    <div class="photo-frame" style="aspect-ratio:16/9;margin-bottom:2rem">
+      <svg width="48" height="48" fill="none" stroke="rgba(240,237,232,0.2)" stroke-width="1.2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+      <span style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--fg3)">Add video clip from the Oct 24 sketch review meeting</span>
+    </div>
+    <div class="principles-list">
+      <div class="principle-item">
+        <span class="principle-num">01</span>
+        <div class="principle-text"><strong>Configuration vs. defaults</strong><span>I recognized that if users were given full manual configuration control, they simply wouldn't visit that settings surface often - an argument for strong defaults over exposing raw configurability.</span></div>
+      </div>
+      <div class="principle-item">
+        <span class="principle-num">02</span>
+        <div class="principle-text"><strong>An open technical question, raised rather than glossed over</strong><span>How would the model even become aware that content had already been updated or approved, if it wasn't re-analyzing the whole template each time? I put this question to engineering directly instead of assuming an answer.</span></div>
+      </div>
+      <div class="principle-item">
+        <span class="principle-num">03</span>
+        <div class="principle-text"><strong>Named personas, concrete specs</strong><span>I defined functional specs for both the Tone and Readability tools - assess, score, suggest, log changes, support bulk assessment, surface scores during proofing - split across two personas: Karl (setup/configuration) and Joey (day-to-day adjustment and use).</span></div>
+      </div>
+      <div class="principle-item">
+        <span class="principle-num">04</span>
+        <div class="principle-text"><strong>A structured placement decision, not a guess</strong><span>Rather than assuming where these tools should live, I ran an explicit evaluation across five real candidate surfaces: the Communication Template Builder, the Communication Template Table, the Approvals/Proofing/Governance Table, Settings, the CT Resource Builder, and the Rapid Communication Sender Builder.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DESIGN REVIEW -->
+  <div class="cs-split reveal">
+    <div class="cs-split-img">
+      <div class="photo-frame">
+        <svg width="48" height="48" fill="none" stroke="rgba(240,237,232,0.2)" stroke-width="1.2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--fg3)">Add screenshot of the tone/readability modal from this review</span>
+      </div>
+      <p class="cs-split-caption">The tone analysis modal, Nov 4 design review</p>
+    </div>
+    <div>
+      <p class="cs-block-tag">Nov 4 Design Review</p>
+      <h2 class="cs-block-heading">Choosing reliable math over impressive-sounding AI</h2>
+      <p>Readability scoring could have been generated by an LLM the same way the rewrite and explanation features were. I pushed back on that: an LLM re-analyzing the same text twice could return a different result each time, and a compliance-facing score needs to stay consistent every time someone checks it. Working directly with engineering, we aligned on Flesch-Kincaid - a deterministic, well-established readability formula - to drive the actual score, and reserved AI specifically for the parts of the experience that benefited from it: the rewrite suggestions and the plain-language explanation of what the score meant.</p>
+      <div class="tension-block">
+        <p class="tension-label">A UX problem I caught live, mid-demo</p>
+        <p>Walking engineering through the prototype in this same review, I caught that the page's layered scroll bars were burying the action buttons below the fold - a real usability risk that wouldn't have been obvious from a static mockup, only from actually walking through the flow live.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- DESIGN PRINCIPLES -->
+  <div class="cs-block reveal">
+    <p class="cs-block-tag">Design Principles</p>
+    <h2 class="cs-block-heading">Trust had to be designed, not assumed</h2>
+    <div class="principles-list">
+      <div class="principle-item">
+        <span class="principle-num">01</span>
+        <div class="principle-text"><strong>Supports decisions, doesn't make them</strong><span>Every recommendation is reviewed and approved by a human before anything ships - the AI suggests, it never publishes.</span></div>
+      </div>
+      <div class="principle-item">
+        <span class="principle-num">02</span>
+        <div class="principle-text"><strong>Explainable by default</strong><span>Scores and suggestions always come with the reasoning behind them, not just a number.</span></div>
+      </div>
+      <div class="principle-item">
+        <span class="principle-num">03</span>
+        <div class="principle-text"><strong>Compliance-safe by design</strong><span>Content that's already been through approval is protected from being silently re-flagged or altered.</span></div>
+      </div>
+      <div class="principle-item">
+        <span class="principle-num">04</span>
+        <div class="principle-text"><strong>Configurable, not rigid</strong><span>Suggestions can be turned on or off at the template level to fit different teams' risk tolerance.</span></div>
+      </div>
+      <div class="principle-item">
+        <span class="principle-num">05</span>
+        <div class="principle-text"><strong>Honest about its own limits</strong><span>Tone scoring can misfire depending on context - that limitation was built into the design conversation from the start, not discovered after launch.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OUTCOME -->
+  <div class="cs-block reveal">
+    <p class="cs-block-tag">Outcome</p>
+    <h2 class="cs-block-heading">Publicly launched, governance intact</h2>
+    <div class="outcome-block">
+      <p>The AI Writing Companion suite launched publicly in December 2025 as part of Precisely's governed-AI push for EngageOne RapidCX. An internal AI best-practices workshop I led on this work was recognized by VP UX leadership as clearer and more rigorous than most external conference presentations on the same topic. As with much of the platform, the company doesn't yet track post-launch usage metrics - so I can't cite adoption numbers here. What I can speak to directly is the process: a governance model built into the product from its very first workshop, not bolted on afterward.</p>
+      <div class="cs-citations">
+        <a href="https://www.precisely.com/press-release/precisely-brings-agentic-ai-to-engageone-rapidcx-customer-communications-platform/" class="cs-citation-link" target="_blank" rel="noopener">Read the launch press release ↗</a>
+        <a href="https://www.aspireleaderboard.com/review-of-precisely" class="cs-citation-link" target="_blank" rel="noopener">Independent analyst review, Aspire Leaderboard ↗</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="cs-next">
+  <p class="cs-next-label">Next case study</p>
+  <a href="next-best-action.html" class="cs-next-link">Next Best Action →</a>
+</div>
+
+<footer>
+  <span class="footer-copy">© 2026 · Open to new opportunities</span>
+  <a href="../Aida_Mokube_Resume_Long.pdf" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;font-size:.72rem;letter-spacing:.06em">Download Resume ↗</a>
+</footer>
+
+<script src="../js/shared.js"></script>
+</body>
+</html>

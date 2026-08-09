@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me - Aïda Mokube</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Inter:wght@300;400;500&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/shared.css">
+<style>
+/* STORY */
+.story-section{display:grid;grid-template-columns:1fr 1.4fr;gap:6rem;padding:7rem 0;border-bottom:1px solid var(--border)}
+.story-photo{position:sticky;top:120px;align-self:start}
+.photo-frame{width:100%;aspect-ratio:3/4;background:var(--bg3);border:1px solid var(--border);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem}
+.photo-caption{font-size:.72rem;color:var(--fg3);font-style:italic;margin-top:.75rem;text-align:left}
+.photo-badge{display:inline-block;background:var(--gold);color:#0e0e0e;padding:.6rem 1rem;font-family:var(--display);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;margin-top:1rem}
+
+.story-heading{font-family:var(--display);font-size:clamp(2rem,3.5vw,3rem);color:var(--fg);letter-spacing:-.02em;line-height:1.1;margin-bottom:2.5rem}
+.story-text p{font-size:.95rem;color:var(--fg2);line-height:1.9;font-weight:300;margin-bottom:1.5rem}
+.story-text strong{color:var(--fg);font-weight:500}
+.pull-quote{border-left:2px solid var(--gold);padding:0 0 .25rem 1.75rem;margin:2.5rem 0}
+.pull-quote p{font-family:var(--italic);font-style:italic;font-size:1.4rem;color:var(--fg);line-height:1.5}
+
+/* SKILLS */
+.skills-section{padding:7rem 0;border-bottom:1px solid var(--border)}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.skill-card{padding:3rem 2.5rem;background:var(--bg2);border:1px solid var(--border);transition:border-color .3s;position:relative;overflow:hidden}
+.skill-card::before{content:'';position:absolute;inset:0;background:var(--gold-dim);transform:scaleY(0);transform-origin:bottom;transition:transform .4s}
+.skill-card:hover{border-color:var(--border2)}
+.skill-card:hover::before{transform:scaleY(1)}
+.skill-num{font-family:var(--display);font-size:3rem;color:var(--border);line-height:1;margin-bottom:1.5rem;position:relative}
+.skill-name{font-family:var(--display);font-size:1.2rem;color:var(--fg);margin-bottom:1rem;position:relative;letter-spacing:.03em}
+.skill-desc{font-size:.88rem;color:var(--fg2);line-height:1.8;font-weight:300;position:relative}
+
+/* TOOLKIT */
+.toolkit-section{padding:5rem 0;border-bottom:1px solid var(--border)}
+.toolkit-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.tool-pill{font-family:var(--display);font-size:.72rem;padding:.5rem 1.25rem;border:1px solid var(--border);color:var(--fg3);letter-spacing:.1em;text-transform:uppercase;transition:border-color .2s,color .2s,background .2s}
+.tool-pill:hover{border-color:var(--gold);color:var(--gold);background:var(--gold-dim)}
+
+.testimonials-section{padding:7rem 0;border-bottom:1px solid var(--border)}
+
+/* OUTSIDE */
+.outside-section{padding:7rem 0}
+.outside-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:6rem;align-items:center}
+.outside-text p{font-size:.95rem;color:var(--fg2);line-height:1.9;font-weight:300;margin-bottom:1.2rem}
+.outside-text strong{color:var(--fg);font-weight:500}
+
+@media(max-width:900px){
+  .story-section,.outside-grid{grid-template-columns:1fr;gap:2.5rem}
+  .skills-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<nav>
+  <a href="index.html" class="nav-name">Aïda Mokube</a>
+  <ul class="nav-links">
+    <li><a href="index.html#work">Work</a></li>
+    <li><a href="about.html" class="active">About Me</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="leadership.html">Leadership</a></li>
+    <li><a href="index.html#contact">Say hello 👋</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-grid">
+    <div>
+      <p class="page-hero-tag">Get to know me</p>
+      <h1 class="page-hero-title">About&nbsp;Me.</h1>
+    </div>
+    <p class="page-hero-sub">Design leader who turns ambiguity into clarity - and clarity into products people trust.</p>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+  <!-- STORY -->
+  <div class="story-section">
+    <div class="story-photo reveal">
+      <div class="photo-frame">
+        <img src="images/puerto-rico.jpg" alt="Aïda in Puerto Rico" style="width:100%;height:100%;object-fit:cover">
+      </div>
+      <p class="photo-caption">Enjoying some well needed Vitamin Sea in Puerto Rico</p>
+      <div class="photo-badge">ENFP-A · Campaigner</div>
+    </div>
+
+    <div class="story-text reveal" style="transition-delay:.15s">
+      <p class="story-label">My story</p>
+      <h2 class="story-heading">How an engineer became a designer</h2>
+
+      <p>I am a Biomedical Engineer by trade. You may think… <strong>"How does an engineer switch to UX?"</strong></p>
+
+      <p>Biomedical Engineering is the study of how physical devices and systems best serve end users - it's fully rooted in design thinking and iterative prototyping. In my program, I found my real passion: <strong>exceeding users' needs.</strong></p>
+
+      <p>I started my career as a <strong>Materials Product Engineer at Kimberly-Clark</strong>, then made an internal move into UX - becoming the <strong>UX Digital Product Developer for Kimberly-Clark Professional</strong>, where I did a combination of UX design, sprint planning, engineering, and QA. That hybrid foundation is still how I design today: systems-oriented, evidence-driven, and comfortable operating at the intersection of design and engineering.</p>
+
+      <div class="pull-quote">
+        <p>"I'm the unicorn you never knew you needed."</p>
+      </div>
+
+      <p>I'm a <strong>Campaigner (ENFP-A)</strong> - passionate, energetic, and deeply people-focused. I'm known for resolving organizational ambiguity through rigorous, cross-functional research, and equally for leadership that extends beyond individual contribution - mentoring, developing, and building team capability. Want the specifics? See my <a href="experience.html" style="color:var(--gold);text-decoration:underline">full experience</a> and <a href="leadership.html" style="color:var(--gold);text-decoration:underline">leadership work</a>.</p>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="skills-section">
+    <div class="section-header reveal">
+      <div>
+        <p class="section-tag">What I bring</p>
+        <h2 class="section-heading">Core Skills</h2>
+      </div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-num">01</div>
+        <h3 class="skill-name">Research-Driven Judgment</h3>
+        <p class="skill-desc">I've planned and conducted structured research studies spanning as many as 8 participants across 6 cross-functional teams to resolve genuine organizational disagreements - not just user interviews, but the kind of research that changes a roadmap.</p>
+      </div>
+      <div class="skill-card reveal" style="transition-delay:.1s">
+        <div class="skill-num">02</div>
+        <h3 class="skill-name">AI Trust &amp; Governance</h3>
+        <p class="skill-desc">Sole designer for two publicly launched AI product suites. I insist on traceability, explainability, and user control in every AI feature - and I've caught real technical shortcuts that threatened to undermine those principles before they reached production.</p>
+      </div>
+      <div class="skill-card reveal" style="transition-delay:.2s">
+        <div class="skill-num">03</div>
+        <h3 class="skill-name">Cross-Functional Leadership</h3>
+        <p class="skill-desc">From facilitating workshops with engineering and product leadership to building a comprehensive scope analysis that drove a data-grounded decision when a project was drifting - I lead through rigor, not just influence.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <div class="testimonials-section">
+    <div class="section-header reveal">
+      <div>
+        <p class="section-tag">Kind words</p>
+        <h2 class="section-heading">What people say</h2>
+      </div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial reveal">
+        <p class="testimonial-text">Great job on the presentation! This was better than a lot of the presentations we saw at a recent AI conference.</p>
+        <p class="testimonial-source">VP of UX · Precisely</p>
+      </div>
+      <div class="testimonial reveal" style="transition-delay:.1s">
+        <p class="testimonial-text">Thank you for compiling this, for running the interviews. I personally learned a lot from this.</p>
+        <p class="testimonial-source">UX Team Manager (live research readout feedback) · Precisely</p>
+      </div>
+      <div class="testimonial reveal" style="transition-delay:.2s">
+        <p class="testimonial-text">Fantastic presentation at the UX Summit around prototyping - lots of great insights to keep our team efficient and effective in the designing phase of our process.</p>
+        <p class="testimonial-source">Director of UX · Precisely</p>
+      </div>
+      <div class="testimonial reveal" style="transition-delay:.3s">
+        <p class="testimonial-text">I'm super impressed with the way you're navigating this feature with all the pressure and mixed information.</p>
+        <p class="testimonial-source">UX Designer, Team Member (mid-project feedback) · Precisely</p>
+      </div>
+      <div class="testimonial reveal" style="transition-delay:.4s">
+        <p class="testimonial-text">We used to describe different skills as superpowers. I definitely think the storytelling and presentation stuff is your superpower.</p>
+        <p class="testimonial-source">VP of R&amp;D · Precisely</p>
+      </div>
+      <div class="testimonial reveal" style="transition-delay:.5s">
+        <p class="testimonial-text">I feel like you were able to convey or imply some of those things but without it sounding like pointing blame or anything - seriously, I was impressed.</p>
+       <p class="testimonial-source">UX Designer, Team Member (presentation feedback) · Precisely</p>
+      </div>
+    </div>
+    <div class="testimonial reveal" style="grid-column:1 / -1">
+      <p class="testimonial-text">"It is no exaggeration to say you played the biggest role in making this experience as much of a success as it is... I was genuinely flabbergasted by the fact that this was your first ever mentoring role... You are the best mentor I could have ever prayed for."</p>
+      <p class="testimonial-source">Former Intern · Precisely</p>
+    </div>
+  </div>
+
+  <!-- TOOLKIT -->
+  <div class="toolkit-section">
+    <div class="section-header reveal">
+      <div>
+        <p class="section-tag">My toolkit</p>
+        <h2 class="section-heading">Tools &amp; Methods</h2>
+      </div>
+    </div>
+    <div class="toolkit-row reveal">
+      <span class="tool-pill">Figma</span>
+      <span class="tool-pill">Sketch</span>
+      <span class="tool-pill">Notion</span>
+      <span class="tool-pill">Miro</span>
+      <span class="tool-pill">Jira</span>
+      <span class="tool-pill">Maze</span>
+      <span class="tool-pill">Claude</span>
+      <span class="tool-pill">Copilot</span>
+      <span class="tool-pill">Design Thinking</span>
+      <span class="tool-pill">User Interviews</span>
+      <span class="tool-pill">Usability Testing</span>
+      <span class="tool-pill">Cross-Functional Facilitation</span>
+      <span class="tool-pill">AI/UX Governance</span>
+      <span class="tool-pill">Stakeholder Mgmt</span>
+      <span class="tool-pill">Presentations &amp; Storytelling</span>
+    </div>
+  </div>
+
+  <!-- OUTSIDE WORK -->
+  <div class="outside-section">
+    <div class="outside-grid">
+      <div class="reveal">
+        <p class="story-label">Outside of work</p>
+        <h2 class="story-heading" style="margin-bottom:2rem">Life beyond the pixels</h2>
+        <div class="outside-text">
+          <p><strong>Art is my passion.</strong> You can find me doing anything from painting, to photographing wedding engagement photos, to filming documentaries in French, to experimenting in the kitchen, to playing ukulele…. (the list goes on &amp; on).</p>
+          <p>When I'm not working, I am enjoying time with my pups! We enjoy travelling together, <strong>meeting new people</strong> and experiencing different cultures. I'm also into weightlifting, boxing and hiking.</p>
+          <p>Eccentric, energetic, and always curious - exactly what I bring to a design team too.</p>
+        </div>
+      </div>
+      <div class="reveal" style="transition-delay:.2s">
+        <div class="photo-frame" style="aspect-ratio:3/4">
+          <img src="images/disney.png" alt="Aïda at Disney" style="width:100%;height:100%;object-fit:cover">
+        </div>
+        <p class="photo-caption">Took my son, Wakanda, to Disney; he loved it!</p>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /content-wrap -->
+
+<footer>
+  <span class="footer-copy">© 2026 · Open to new opportunities</span>
+  <a href="Aida_Mokube_Resume_Long.pdf" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;font-size:.72rem;letter-spacing:.06em">Download Resume ↗</a>
+</footer>
+
+<script src="js/shared.js"></script>
+</body>
+</html>

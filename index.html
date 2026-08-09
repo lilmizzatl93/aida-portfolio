@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aïda Mokube - Sr. UX Designer</title>
+<meta name="description" content="Senior UX Designer with 5 years of design experience and 2 years in engineering. Sole designer for two publicly launched AI product suites in B2B SaaS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Inter:wght@300;400;500&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/shared.css">
+<style>
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:flex-end;padding:4.25rem 3.5rem 3rem;position:relative}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:flex-end;width:100%;position:relative;z-index:1}
+.hero-left{opacity:0;animation:fadeUp .8s .2s forwards}
+.hero-photo-large{width:100%;height:calc(100vh - 7.25rem);overflow:hidden;border:1px solid rgba(240,237,232,0.12);position:relative;opacity:0;animation:fadeUp .8s .4s forwards}
+.hero-photo-large img{width:100%;height:100%;object-fit:cover;object-position:center 25%}
+.hero-sub{margin-top:1.25rem}
+.hero-desc{font-size:1rem;color:var(--fg2);line-height:1.8;max-width:460px;font-weight:300}
+.hero-desc em{font-family:var(--display);font-style:normal;color:var(--fg);font-size:1rem;letter-spacing:0.02em}
+.hero-actions{display:flex;gap:1rem;flex-shrink:0;align-items:center;margin-top:1.25rem}
+.hero-name{margin-bottom:0}
+.hero-noise{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none}
+.hero-glow{position:absolute;inset:0;background-image:repeating-linear-gradient(135deg,rgba(240,237,232,0.03) 0px,rgba(240,237,232,0.03) 1px,transparent 1px,transparent 60px),linear-gradient(135deg,transparent 40%,rgba(201,168,76,0.06) 40%,rgba(201,168,76,0.06) 60%,transparent 60%);pointer-events:none}
+
+.hero-name{font-family:var(--display);font-size:clamp(3rem,5.5vw,6rem);line-height:1.05;color:var(--fg);letter-spacing:0.02em;opacity:0;animation:fadeUp .8s .4s forwards;margin-bottom:0}
+.hero-name span{color:var(--gold)}
+
+/* MARQUEE */
+.marquee-wrap{overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:.8rem 0;background:var(--bg2)}
+.marquee-track{display:flex;gap:2rem;width:max-content;animation:marquee 25s linear infinite}
+.marquee-item{font-family:var(--display);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--fg3);white-space:nowrap;display:flex;align-items:center;gap:2rem}
+.marquee-item::after{content:'✦';color:var(--gold);font-size:.5rem}
+
+/* WORK */
+.work-section{padding:8rem 3.5rem 60px;max-width:1400px;margin:0 auto}
+.cs-grid{display:flex;flex-direction:column;gap:2.5rem}
+.cs-card{display:grid;grid-template-columns:1fr 1fr;min-height:520px;background:var(--bg2);border:1px solid var(--border);overflow:hidden;text-decoration:none;color:inherit;transition:border-color .3s;position:relative}
+.cs-card:hover{border-color:var(--border2)}
+.cs-card.flip{direction:rtl}
+.cs-card.flip>*{direction:ltr}
+.cs-visual{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.cs-visual.v-dark{background:#0a0f1e}
+.cs-visual.v-gold{background:#1a1400}
+.cs-visual.v-purple{background:#140a1e}
+.cs-visual.v-green{background:#0a1e12}
+.cs-visual-inner{position:relative;z-index:1;width:92%;display:flex;align-items:center;justify-content:center}
+.cs-visual-bg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:12rem;opacity:.04;color:white;line-height:1;user-select:none;pointer-events:none;letter-spacing:0.02em}
+.cs-mock{width:100%;aspect-ratio:9/16;max-width:200px;background:var(--bg3);border:1px solid var(--border2);border-radius:12px;overflow:hidden;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem}
+.cs-mock-label{font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--fg3);text-align:center;padding:.5rem}
+.cs-info{padding:3.5rem;display:flex;flex-direction:column;justify-content:center;background:var(--bg2)}
+.cs-num{font-family:var(--display);font-size:5rem;color:var(--border);line-height:1;margin-bottom:1.5rem;letter-spacing:0.02em}
+.cs-company{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem}
+.cs-title{font-family:var(--display);font-size:clamp(1.6rem,2.5vw,2.4rem);color:var(--fg);line-height:1.1;letter-spacing:0.02em;margin-bottom:.5rem}
+.cs-role{font-size:.78rem;color:var(--fg3);letter-spacing:.04em;margin-bottom:1.5rem}
+.cs-desc{font-size:.92rem;color:var(--fg2);line-height:1.8;font-weight:300;margin-bottom:2rem;max-width:420px}
+.cs-tags{display:grid;grid-template-columns:repeat(2,max-content);gap:.5rem;margin-bottom:2rem}
+.cs-tag{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .85rem;border:1px solid var(--border2);color:var(--fg3);transition:border-color .2s,color .2s}
+.cs-card:hover .cs-tag{border-color:var(--fg3);color:var(--fg2)}
+.cs-cta{display:inline-flex;align-items:center;gap:.6rem;font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);transition:gap .2s}
+.cs-card:hover .cs-cta{gap:1rem}
+
+/* STATS */
+.stats-section{padding:5rem 3.5rem;background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.recognition-band{border:1px solid rgba(201,168,76,0.3);border-radius:4px;background:linear-gradient(135deg, rgba(45,25,10,0.4), rgba(15,10,5,0.6));padding:2.5rem 3rem;max-width:1100px;margin:0 auto 60px}
+.recognition-tag{font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.85rem}
+.recognition-text{font-size:1.05rem;color:var(--fg2);line-height:1.7;font-weight:300;margin-bottom:1rem}
+.recognition-text strong{color:var(--fg);font-weight:500}
+.recognition-link{font-size:.78rem;letter-spacing:.06em;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:2px}
+.stats-inner{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+.stat-item{padding:3rem 2rem;border-right:1px solid var(--border);text-align:center;position:relative;overflow:hidden}
+.stat-item:last-child{border-right:none}
+.stat-item::before{content:'';position:absolute;inset:0;background:var(--gold-dim);transform:scaleY(0);transform-origin:bottom;transition:transform .4s}
+.stat-item:hover::before{transform:scaleY(1)}
+.stat-num{font-family:var(--display);font-size:3.5rem;color:var(--gold);line-height:1;margin-bottom:.5rem;position:relative;letter-spacing:0.02em}
+.stat-label{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--fg3);position:relative}
+
+/* CONTACT */
+.contact-section{padding:10rem 3.5rem;max-width:1400px;margin:0 auto;text-align:center;position:relative}
+.contact-bg-text{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:var(--display);font-size:clamp(6rem,18vw,16rem);color:var(--border);line-height:1;pointer-events:none;user-select:none;white-space:nowrap;letter-spacing:0.02em}
+.contact-inner{position:relative;z-index:1}
+.contact-inner .section-tag{display:block;margin-bottom:1rem}
+.contact-heading{font-family:var(--display);font-size:clamp(2.5rem,6vw,5.5rem);color:var(--fg);letter-spacing:0.02em;line-height:1.1;margin-bottom:1.5rem}
+.contact-sub{font-size:1rem;color:var(--fg2);max-width:550px;margin:0 auto 3rem;font-weight:300;line-height:1.8}
+.contact-email{display:inline-block;font-family:var(--display);font-size:clamp(1.2rem,3vw,2rem);color:var(--fg);text-decoration:none;border-bottom:2px solid var(--gold);padding-bottom:.25rem;letter-spacing:0.02em;transition:color .2s}
+.contact-email:hover{color:var(--gold)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero{padding:6rem 1.5rem 4rem}
+  .hero-grid{grid-template-columns:1fr;gap:2rem}
+  .hero-photo-large{order:-1;max-width:280px;margin:0 auto}
+  .recognition-band{padding:2rem 1.5rem;margin:0 auto 40px}
+  .recognition-content{text-align:center}
+  .hero-name{font-size:clamp(3rem,14vw,5rem)}
+  .work-section,.contact-section{padding:5rem 1.5rem}
+  .cs-card{grid-template-columns:1fr;min-height:auto}
+  .cs-card.flip{direction:ltr}
+  .cs-visual{min-height:280px}
+  .cs-info{padding:2.5rem 1.5rem}
+  .stats-inner{grid-template-columns:1fr 1fr}
+  .stat-item{border-right:none;border-bottom:1px solid var(--border)}
+}
+</style>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- NAV -->
+<nav>
+  <div style="display:flex;align-items:center;gap:1rem;position:relative;z-index:1">
+    <a href="index.html" class="nav-name">Aïda Mokube</a>
+    <span style="width:1px;height:1rem;background:var(--border2)"></span>
+    <span style="font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)">Sr. UX Designer · Atlanta, GA</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="about.html">About Me</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="leadership.html">Leadership</a></li>
+    <li><a href="#contact">Say hello 👋</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-noise"></div>
+  <div class="hero-glow"></div>
+
+  <div class="hero-grid">
+    <div class="hero-left">
+      <h1 class="hero-name">I'm<br>A<span>ï</span>da</h1>
+      <div class="hero-sub">
+        <p class="hero-desc">
+          Senior UX Designer with 5 years of design experience spanning B2B SaaS and experiential product design, plus 2 years in engineering. Sole designer for two publicly launched AI product suites - known for resolving organizational ambiguity through rigorous research and embedding trust and governance into every AI feature shipped.<br><br>
+          <em>Biomedical Engineer turned Designer.<br>The unicorn you never knew you needed.</em>
+        </p>
+        <div class="hero-actions">
+          <a href="#work" class="btn-primary">View my work →</a>
+          <a href="about.html" class="btn-ghost">About me</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-photo-large">
+      <img src="images/Headshot.jpg" alt="Aïda Mokube">
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">UX Design</span>
+    <span class="marquee-item">User Research</span>
+    <span class="marquee-item">Prototyping</span>
+    <span class="marquee-item">Figma</span>
+    <span class="marquee-item">Cross-Functional Leadership</span>
+    <span class="marquee-item">Design Strategy</span>
+    <span class="marquee-item">AI/UX Governance</span>
+    <span class="marquee-item">Storytelling</span>
+    <span class="marquee-item">Usability Testing</span>
+    <span class="marquee-item">Stakeholder Alignment</span>
+    <span class="marquee-item">UX Design</span>
+    <span class="marquee-item">User Research</span>
+    <span class="marquee-item">Prototyping</span>
+    <span class="marquee-item">Figma</span>
+    <span class="marquee-item">Cross-Functional Leadership</span>
+    <span class="marquee-item">Design Strategy</span>
+    <span class="marquee-item">AI/UX Governance</span>
+    <span class="marquee-item">Storytelling</span>
+    <span class="marquee-item">Usability Testing</span>
+    <span class="marquee-item">Stakeholder Alignment</span>
+  </div>
+</div>
+
+<!-- WORK -->
+<div class="work-section" id="work">
+  <div class="section-header reveal">
+    <div>
+      <p class="section-tag">Selected work</p>
+      <h2 class="section-heading">Case Studies</h2>
+    </div>
+  </div>
+
+  <div class="cs-grid">
+
+    <!-- AI WRITING COMPANION -->
+    <a class="cs-card reveal" href="case-studies/ai-writing.html">
+      <div class="cs-visual v-dark">
+        <div class="cs-visual-bg">AI</div>
+        <div class="cs-visual-inner">
+          <img src="images/Post%20AI%20Analysis%20Modal.png" alt="Post AI Analysis Modal" style="width:100%;max-height:440px;object-fit:contain;border-radius:8px">
+        </div>
+        <div style="position:absolute;bottom:2rem;left:2rem;right:2rem">
+          <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+            <span style="font-size:.65rem;padding:.25rem .6rem;border:1px solid rgba(78,205,196,0.3);color:#4ecdc4;letter-spacing:.08em;text-transform:uppercase">Scan</span>
+            <span style="font-size:.65rem;padding:.25rem .6rem;border:1px solid rgba(78,205,196,0.3);color:#4ecdc4;letter-spacing:.08em;text-transform:uppercase">Improve</span>
+            <span style="font-size:.65rem;padding:.25rem .6rem;border:1px solid rgba(78,205,196,0.3);color:#4ecdc4;letter-spacing:.08em;text-transform:uppercase">Rewrite</span>
+          </div>
+        </div>
+      </div>
+      <div class="cs-info">
+        <div class="cs-num">01</div>
+        <p class="cs-company">Precisely · 2025–2026</p>
+        <h3 class="cs-title">AI Writing<br>Companion</h3>
+        <p class="cs-role">Sr. UX Designer</p>
+        <p class="cs-desc">Sole designer for a 3-agent AI writing suite (Tone, Readability, Contextual Rewrite) on a B2B SaaS communications platform for regulated industries. Established AI governance principles - traceability, explainability, user control - from the very first concept workshop, months before launch.</p>
+        <div class="cs-tags">
+          <span class="cs-tag">AI/UX Governance</span>
+          <span class="cs-tag">Trust Design</span>
+          <span class="cs-tag">Enterprise SaaS</span>
+          <span class="cs-tag">Risk Mitigation</span>
+        </div>
+        <span class="cs-cta">View case study →</span>
+      </div>
+    </a>
+
+    <!-- NEXT BEST ACTION -->
+    <a class="cs-card flip reveal" href="case-studies/next-best-action.html">
+      <div class="cs-visual v-purple">
+        <div class="cs-visual-bg">NBA</div>
+        <div class="cs-visual-inner">
+          <img src="images/Homepage_open.png" alt="Next Best Action Homepage" style="width:100%;max-height:440px;object-fit:contain;border-radius:8px">
+        </div>
+      </div>
+      <div class="cs-info">
+        <div class="cs-num">02</div>
+        <p class="cs-company">Precisely · 2026</p>
+        <h3 class="cs-title">Next Best<br>Action</h3>
+        <p class="cs-role">Sr. UX Designer</p>
+        <p class="cs-desc">Sole designer for an AI recommendation engine - "AI tells you what to do next," not "AI does it for you." Facilitated cross-functional workshops, navigated a mid-project scope cut, and caught a technical shortcut that had overridden the team's own user-control commitment before it reached production.</p>
+        <div class="cs-tags">
+          <span class="cs-tag">AI/UX Governance</span>
+          <span class="cs-tag">Workshop Facilitation</span>
+          <span class="cs-tag">Enterprise SaaS</span>
+          <span class="cs-tag">Navigating Ambiguity</span>
+        </div>
+        <span class="cs-cta">View case study →</span>
+      </div>
+    </a>
+
+    <!-- DATA DEFINITIONS -->
+    <a class="cs-card reveal" href="case-studies/data-definitions.html">
+      <div class="cs-visual v-green">
+        <div class="cs-visual-bg">DD</div>
+        <div class="cs-visual-inner">
+          <img src="images/Visualization_of_JSON_Data_View_Path_Balance.png" alt="JSON Data View Path Visualization" style="width:100%;max-height:440px;object-fit:contain;border-radius:8px">
+        </div>
+      </div>
+      <div class="cs-info">
+        <div class="cs-num">03</div>
+        <p class="cs-company">Precisely · 2023</p>
+        <h3 class="cs-title">Data<br>Definitions</h3>
+        <p class="cs-role">UX Designer → Sr. UX Designer</p>
+        <p class="cs-desc">A foundational feature connecting client data to the platform for use in tables, charts, and personalized communications. Built a comprehensive, sized scope analysis to drive a data-grounded MVP decision when timelines drifted out of alignment, and flagged cross-feature risks before they became production issues.</p>
+        <div class="cs-tags">
+          <span class="cs-tag">Scope Discipline</span>
+          <span class="cs-tag">Cross-Functional</span>
+          <span class="cs-tag">Enterprise SaaS</span>
+          <span class="cs-tag">Technical Fluency</span>
+        </div>
+        <span class="cs-cta">View case study →</span>
+      </div>
+    </a>
+
+    <!-- ONVATION -->
+    <a class="cs-card flip reveal" href="case-studies/onvation.html">
+      <div class="cs-visual v-gold">
+        <div class="cs-visual-bg">IW</div>
+        <div class="cs-visual-inner">
+          <img src="images/onvation.png" alt="Onvation Intelligent Washroom" style="width:100%;max-height:440px;object-fit:contain;border-radius:8px">
+        </div>
+      </div>
+      <div class="cs-info">
+        <div class="cs-num">04</div>
+        <p class="cs-company">Kimberly-Clark · 2019–2020</p>
+        <h3 class="cs-title">Onvation Intelligent<br>Washroom</h3>
+        <p class="cs-role">UX Digital Product Developer</p>
+        <p class="cs-desc">Designed a restroom management system enabling facility managers and custodial staff to improve restocking efficiency. Solution was implemented in the World Trade Center. Led user research, managed QA, conducted usability testing, and drove design decisions end-to-end from wireframes to launch.</p>
+        <div class="cs-tags">
+          <span class="cs-tag">User Research</span>
+          <span class="cs-tag">Mobile App</span>
+          <span class="cs-tag">IoT</span>
+          <span class="cs-tag">Stakeholder Mgmt</span>
+        </div>
+        <span class="cs-cta">View case study →</span>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<!-- INDUSTRY RECOGNITION -->
+<div class="recognition-band reveal">
+  <div class="recognition-content">
+    <p class="recognition-tag">Independent Recognition</p>
+    <p class="recognition-text">Aspire, an independent analyst firm covering the customer communications industry, named Precisely's AI governance approach - the same <strong>human-in-the-loop, non-autonomous principles</strong> established in the work above - as a core strategic differentiator.</p>
+    <a href="https://www.aspireleaderboard.com/review-of-precisely" class="recognition-link" target="_blank" rel="noopener">Read the Aspire Leaderboard review ↗</a>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-section">
+  <div class="stats-inner">
+    <div class="stat-item reveal">
+      <div class="stat-num">2</div>
+      <div class="stat-label">AI Product Suites Shipped, Sole Designer</div>
+    </div>
+    <div class="stat-item reveal" style="transition-delay:.1s">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Aligned Features Delivered On Schedule</div>
+    </div>
+    <div class="stat-item reveal" style="transition-delay:.2s">
+      <div class="stat-num">3</div>
+      <div class="stat-label">Platform Generations Owned End-to-End</div>
+    </div>
+    <div class="stat-item reveal" style="transition-delay:.3s">
+      <div class="stat-num">6</div>
+      <div class="stat-label">Cross-Functional Teams Aligned in One Study</div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="contact-section" id="contact">
+  <div class="contact-bg-text">HELLO</div>
+  <div class="contact-inner reveal">
+    <span class="section-tag">Connect with me</span>
+    <h2 class="contact-heading">Let's find some<br> time to talk.</h2>
+    <p class="contact-sub">You need someone who gets users, influences stakeholders, and ships great work. I'd love to show you why I'm the missing piece.</p>
+    <a href="mailto:aidamokube@gmail.com" class="contact-email">aidamokube@gmail.com</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-copy">© 2026 · Open to new opportunities</span>
+  <a href="Aida_Mokube_Resume_Long.pdf" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;font-size:.72rem;letter-spacing:.06em">Download Resume ↗</a>
+</footer>
+
+<script src="js/shared.js"></script>
+</body>
+</html>
