@@ -9,6 +9,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Inter:wght@300;400;500&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/shared.css">
 <link rel="stylesheet" href="../css/case-study.css">
+<style>
+.cs-split{display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;align-items:start;padding:2.5rem 0;border-bottom:1px solid var(--border)}
+.cs-split.flip{grid-template-columns:1.2fr 1fr}
+.cs-split.flip .cs-split-img{order:2}
+.cs-split-img img{width:100%;height:auto;border-radius:8px;border:1px solid var(--border)}
+.cs-split-img .photo-frame,.photo-frame{width:100%;aspect-ratio:4/3;background:var(--bg3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem}
+.cs-split-caption{font-size:.72rem;color:var(--fg3);font-style:italic;margin-top:.75rem;text-align:center}
+.cs-split p{font-size:.98rem;color:var(--fg2);line-height:1.9;font-weight:300;margin-bottom:1.4rem}
+@media(max-width:900px){
+  .cs-split,.cs-split.flip{grid-template-columns:1fr;gap:2rem}
+  .cs-split.flip .cs-split-img{order:0}
+}
+</style>
 </head>
 <body>
 
@@ -32,12 +45,12 @@
     <a href="../index.html#work" class="cs-hero-back reveal">← Back to work</a>
     <p class="cs-hero-tag reveal">Case Study 02 · AI / UX Governance</p>
     <h1 class="cs-hero-title reveal">Next Best Action</h1>
-    <p class="cs-hero-sub reveal">Sole designer for an AI recommendation engine built on one clear promise: it tells you what to do next, it doesn't do it for you.</p>
+    <p class="cs-hero-sub reveal">The project that tested how well I could hold a design principle together under real deadline pressure. It's part of the AI Agent lineup Precisely publicly announced in April 2026, with the MVP still taking shape.</p>
     <div class="cs-hero-meta reveal">
       <div class="cs-meta-item"><div class="cs-meta-label">Company</div><div class="cs-meta-value">Precisely</div></div>
       <div class="cs-meta-item"><div class="cs-meta-label">Role</div><div class="cs-meta-value">Sr. UX Designer · Sole Designer</div></div>
       <div class="cs-meta-item"><div class="cs-meta-label">Timeline</div><div class="cs-meta-value">Jan 2026 – Present</div></div>
-      <div class="cs-meta-item"><div class="cs-meta-label">Status</div><div class="cs-meta-value">Publicly Launched, Apr 2026</div></div>
+      <div class="cs-meta-item"><div class="cs-meta-label">Status</div><div class="cs-meta-value">Publicly Announced, Apr 2026 · MVP In Progress</div></div>
     </div>
   </div>
 </div>
@@ -48,22 +61,96 @@
   <div class="cs-block reveal">
     <p class="cs-block-tag">The Problem</p>
     <h2 class="cs-block-heading">Users had the data, but no clear path from data to action</h2>
-    <p>Users managing customer communications had to manually piece together engagement signals - open rates, click rates, delivery performance - across scattered dashboards to figure out what to change and why. The process was slow, inconsistent, and reactive: teams relied on trial-and-error and intuition rather than any repeatable way to translate performance data into action.</p>
+    <p>Users managing customer communications had to manually piece together engagement signals - open rates, click rates, delivery performance - across scattered dashboards to figure out what to change and why. The process was slow, inconsistent, and reactive. Teams relied on trial-and-error and intuition rather than any repeatable way to translate performance data into action.</p>
   </div>
 
   <!-- FRAMING -->
   <div class="cs-block reveal">
     <p class="cs-block-tag">Framing the Work</p>
     <h2 class="cs-block-heading">A recommendation engine, not an automation system</h2>
-    <p>Early in the project, I helped the team align on a core framing - <strong>"AI tells you what to do next," not "AI does it for you"</strong> - and held that line throughout, even as the underlying models matured. Recommendations are advisory only; users decide what to act on, and nothing executes automatically on a user's behalf.</p>
-    <p>I designed explicitly for low-confidence and cold-start states, since the underlying models only had access to delivery signals and template metadata - no recipient-level data, no downstream outcome signal beyond opens and clicks. Getting the confidence story right mattered as much as getting the recommendation right.</p>
+    <p>Early in the project, I helped the team align on a core framing - <strong>"AI tells you what to do next," not "AI does it for you"</strong> - and held that line throughout, even as the underlying models matured. Recommendations are advisory only. Users decide what to act on. Nothing executes automatically on a user's behalf.</p>
+    <p>I designed explicitly for low-confidence and cold-start states, since the underlying models only had access to delivery signals and template metadata. There was no recipient-level data, and no downstream outcome signal beyond opens and clicks. Getting the confidence story right mattered as much as getting the recommendation right.</p>
   </div>
 
-  <!-- PROCESS -->
-  <div class="cs-block reveal">
+  <!-- THE EXPERIENCE -->
+  <div class="cs-block reveal" style="border-bottom:none;padding-bottom:0">
+    <p class="cs-block-tag">The Experience</p>
+    <h2 class="cs-block-heading">The panel at work</h2>
+  </div>
+  <div class="cs-split reveal" style="align-items:stretch;padding-top:1.5rem">
+    <div class="cs-split-img" style="display:flex;flex-direction:column;justify-content:flex-end">
+      <div class="photo-frame">
+        <svg width="48" height="48" fill="none" stroke="rgba(240,237,232,0.2)" stroke-width="1.2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--fg3)">Add screenshot - homepage with "Review Next Best Action" link and notification dot</span>
+      </div>
+      <p class="cs-split-caption">The entry point, below the homepage's status message</p>
+      <div class="photo-frame" style="margin-top:1.5rem">
+        <svg width="48" height="48" fill="none" stroke="rgba(240,237,232,0.2)" stroke-width="1.2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--fg3)">Add screenshot - open panel showing insight tiles</span>
+      </div>
+      <p class="cs-split-caption">The panel, opened to show insight tiles</p>
+    </div>
+    <div>
+      <p>On the homepage, a link below the status message reads "Review Next Best Action." A notification dot appears next to it whenever new recommendations are ready, so users know there's something new without opening the panel to check. Clicking the link opens the panel and swaps its own copy to "Hide Next Best Action"; a dedicated icon next to the panel closes it too, easing the transition to the floating-panel version planned for a later phase.</p>
+      <p>Inside, each recommendation is a tile: a short, LLM-generated description capped at 140 characters, a "Learn more" link, and a close (X) to dismiss it. Clicking "Learn more" is the system's primary positive signal. Closing a tile is treated as neutral, not negative. Dismissed tiles are removed and can't be retrieved in this phase - a known limitation I flagged rather than hid.</p>
+      <p>Before there's enough data to say anything statistically meaningful, the panel shows a plain, reassuring message instead of insights: it's collecting data, and value is coming. I proposed rotating a small set of pre-written variations of that message, changed daily, so the empty state doesn't read as stuck or broken during the wait.</p>
+    </div>
+  </div>
+
+  <!-- PROCESS INTRO -->
+  <div class="cs-block reveal" style="border-bottom:none;padding-bottom:0">
     <p class="cs-block-tag">Process</p>
     <h2 class="cs-block-heading">Facilitating alignment under real deadline pressure</h2>
-    <p>I designed and facilitated a cross-functional Insights Workshop to align stakeholders on scope and define the Minimal Releasable Product. To make an abstract principle land with a room of engineers and stakeholders, I used a real, self-sourced case study - the early, trust-damaging rollout of Microsoft Teams meeting transcripts - to show that good technology can still fail to earn adoption if trust isn't designed for. It reframed the room's conversation from "is the model good enough" to "will people actually use this."</p>
+    <p>I ran this project through a sequence of cross-functional sessions, each one narrowing scope and building shared understanding before the next. Below are the three that mattered most.</p>
+  </div>
+
+  <!-- MARCH 24 DESIGN REVIEW -->
+  <div class="cs-split reveal" style="padding-top:1.5rem">
+    <div class="cs-split-img">
+      <div class="photo-frame">
+        <svg width="48" height="48" fill="none" stroke="rgba(240,237,232,0.2)" stroke-width="1.2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--fg3)">Add screenshot from the March 24 UX Design Review deck</span>
+      </div>
+      <p class="cs-split-caption">Presenting the PRFAQ "is / is not" framing</p>
+    </div>
+    <div>
+      <p class="cs-block-tag">March 24 · UX Design Review</p>
+      <h2 class="cs-block-heading">Landing the framing before the room could drift</h2>
+      <p>This was my first formal design review on NBA, and where the "tells you, doesn't do it for you" framing first landed with the team. I walked the room through the PRFAQ's boundaries - what the system is (an advisory recommender that adapts to delivery performance, recipient behavior, and user feedback) and what it explicitly is not (fully automated, a black box, capable of irreversible changes). Getting that distinction agreed on early gave every later scope conversation a shared reference point to fall back on.</p>
+    </div>
+  </div>
+
+  <!-- INSIGHTS WORKSHOP -->
+  <div class="cs-split flip reveal">
+    <div class="cs-split-img">
+      <div class="photo-frame">
+        <svg width="48" height="48" fill="none" stroke="rgba(240,237,232,0.2)" stroke-width="1.2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        <span style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--fg3)">Add video clip from the April 14 Insights Workshop recording</span>
+      </div>
+      <p class="cs-split-caption">Facilitating the cross-functional Insights Workshop</p>
+    </div>
+    <div>
+      <p class="cs-block-tag">April 14 · Insights Workshop</p>
+      <h2 class="cs-block-heading">Reframing the room from "is the model good" to "will people use this"</h2>
+      <p>I designed and facilitated a cross-functional workshop, with a fellow UX designer co-facilitating, to align stakeholders on scope and define the Minimal Releasable Product. To make an abstract principle land with a room of engineers and stakeholders, I used a real, self-sourced case study - the early, trust-damaging rollout of Microsoft Teams meeting transcripts - to show that good technology can still fail to earn adoption if trust isn't designed for. It reframed the conversation from whether the model was accurate enough to whether people would actually use it.</p>
+    </div>
+  </div>
+
+  <!-- MAY 1 TILE ANATOMY -->
+  <div class="cs-split reveal">
+    <div class="cs-split-img">
+      <div class="photo-frame">
+        <svg width="48" height="48" fill="none" stroke="rgba(240,237,232,0.2)" stroke-width="1.2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--fg3)">Add screenshot of the recommendation tile anatomy from the May 1 Design Review</span>
+      </div>
+      <p class="cs-split-caption">Defining the anatomy of a recommendation tile</p>
+    </div>
+    <div>
+      <p class="cs-block-tag">May 1 · Initial Design Framework</p>
+      <h2 class="cs-block-heading">Naming things precisely, so the team could scope precisely</h2>
+      <p>I broke the recommendation tile down into its parts - icon, title, a dismissible close, a 3-line description, a text-button action, an optional tag, and a timeframe - and set constraints on each one (title capped at 3 words, description capped at 140 characters) to keep the LLM's output scannable rather than verbose.</p>
+      <p>Just as important was aligning on terminology. I proposed a clear split between <strong>Insights</strong> (statistically significant, "learn more" only, in scope for MRP), <strong>Trends</strong> (predictive, optional/if-feasible), and <strong>Actions</strong> (task-driven, explicitly out of scope for this phase). Without that split, "recommendation" meant something different in every conversation.</p>
+    </div>
   </div>
 
   <!-- TENSIONS NAVIGATED -->
@@ -72,29 +159,52 @@
     <h2 class="cs-block-heading">Tracking the product's integrity under pressure</h2>
 
     <div class="tension-block">
-      <p class="tension-label">A scope cut, and making its cost visible</p>
-      <p>A technical platform constraint (the Angular UI couldn't embed into the platform's older JSP pages) forced a pivot from an all-pages floating panel down to a homepage-only placement for MVP. Rather than let that read as a routine scope trim, I documented the real cost: reduced contextual relevance, weaker perceived value, and a design-consistency break with a related in-flight AI project depending on the same floating-panel pattern.</p>
+      <p class="tension-label"><strong>A scope cut, and making its cost visible</strong></p>
+      <p>A technical platform constraint (the Angular UI couldn't embed into the platform's older JSP pages) forced a pivot from an all-pages floating panel down to a homepage-only placement for MVP. The floating panel had been designed to open from a persistent sparkles icon in the nav bar - itself intended as the entry point for a future global AI assistant. That icon was removed, and a text link on the homepage took its place. Rather than let that read as a routine scope trim, I documented the real cost: users now have to leave their workflow and return to the homepage to see a recommendation, weaker perceived value, and a design-consistency break with a related in-flight AI project that depends on the same floating-panel pattern.</p>
     </div>
 
     <div class="tension-block">
-      <p class="tension-label">Catching a regression against our own principles</p>
+      <p class="tension-label"><strong>Catching a regression against our own principles</strong></p>
       <p>I identified that the MVP build was sharing recommendation-dismissal state across every user in a tenant - meaning one person's dismissal silently removed a recommendation for everyone else. That directly contradicted an earlier team alignment that each user should control their own view. I flagged it explicitly rather than letting a technical shortcut quietly override a commitment we'd already made to users.</p>
     </div>
 
     <div class="tension-block">
-      <p class="tension-label">An accessibility catch, after the fact</p>
+      <p class="tension-label"><strong>An accessibility catch, after the fact</strong></p>
       <p>When a scope change moved a notification indicator from the dark navigation bar to a lighter page background, I caught that it lost the contrast it needed to remain accessible - a case of continuing to audit a design through a pivot, not just at the original handoff.</p>
+    </div>
+
+    <div class="tension-block">
+      <p class="tension-label"><strong>Pushing back on single-metric thinking</strong></p>
+      <p>A data scientist on the AI Labs team flagged that a single statistically significant metric can be misleading in isolation. Short communications like a password-reset email may show strong engagement precisely because they're short and have one obvious call to action - that doesn't mean every communication should be trimmed to a sentence and a button. I carried that caution directly into how insights get worded, so a real statistical finding doesn't get over-generalized into bad advice.</p>
     </div>
   </div>
 
-  <!-- OUTCOME -->
+  <!-- PRESENTING THE MVP -->
+  <div class="cs-block reveal" style="border-bottom:none;padding-bottom:0">
+    <p class="cs-block-tag">Presenting the Work</p>
+    <h2 class="cs-block-heading">Bringing the team along as the MVP took shape</h2>
+  </div>
+  <div class="cs-split reveal" style="padding-top:1.5rem">
+    <div class="cs-split-img">
+      <div class="photo-frame">
+        <svg width="48" height="48" fill="none" stroke="rgba(240,237,232,0.2)" stroke-width="1.2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        <span style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--fg3)">Add video clip - sprint review presenting NBA's MVP progress</span>
+      </div>
+      <p class="cs-split-caption">Presenting MVP progress in a cross-functional sprint review</p>
+    </div>
+    <div>
+      <p>Regular sprint reviews kept engineering, product, and leadership aligned as the MVP scope evolved. Walking the team through where the design stood - what shipped, what got cut, and why - was as much a part of the job as the design work itself.</p>
+    </div>
+  </div>
+
+  <!-- CURRENT STATUS -->
   <div class="cs-block reveal">
-    <p class="cs-block-tag">Outcome</p>
-    <h2 class="cs-block-heading">Launched, with its governance line held</h2>
+    <p class="cs-block-tag">Current Status</p>
+    <h2 class="cs-block-heading">Publicly announced, still being built</h2>
     <div class="outcome-block">
-      <p>Next Best Action launched publicly in April 2026 as part of Precisely's governed-AI push for EngageOne RapidCX. As with the AI Writing Companion suite, the company doesn't yet track post-launch usage metrics, so I can't cite adoption numbers. What I can speak to directly is the process of building it responsibly under real technical and organizational pressure - and the specific judgment calls, documented in real time, that made that possible.</p>
+      <p>Precisely publicly announced the Next Best Action AI Agent on April 22, 2026, as part of the latest EngageOne RapidCX release. The MVP itself - a homepage-only recommendation panel built in Angular - is still in active design and development. Open questions remain around recommendation volume and cadence, LLM output validation against UI constraints, and finalizing the insight-versus-trend classification rules. As with the AI Writing Companion suite, the company doesn't yet track post-launch usage metrics, so I won't be able to cite adoption numbers even once this ships. What I can speak to directly is the process: holding a governance line, and flagging real tradeoffs, through a project that kept moving under real technical and organizational pressure.</p>
       <div class="cs-citations">
-        <a href="https://www.precisely.com/press-release/precisely-engageone-rapidcx-spring/" class="cs-citation-link" target="_blank" rel="noopener">Read the launch press release ↗</a>
+        <a href="https://www.precisely.com/press-release/precisely-engageone-rapidcx-spring/" class="cs-citation-link" target="_blank" rel="noopener">Read the announcement press release ↗</a>
         <a href="https://www.aspireleaderboard.com/review-of-precisely" class="cs-citation-link" target="_blank" rel="noopener">Independent analyst review, Aspire Leaderboard ↗</a>
       </div>
     </div>
